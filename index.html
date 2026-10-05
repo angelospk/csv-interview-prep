@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Συνέντευξη CSV Analyst: οδηγός (σαν να είσαι 5)</title>
+<style>
+:root{--bg:#fbf8f1;--ink:#1f2937;--mut:#6b7280;--blue:#2563eb;--green:#16a34a;--orange:#ea580c;--red:#dc2626;--violet:#7c3aed;--line:#e5dfd0}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.65 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:900px;margin:0 auto;padding:16px 14px 100px}
+h1{font-size:2rem;margin:.2em 0;line-height:1.2}
+h2{font-size:1.5rem;margin:2.2em 0 .3em;padding-top:.5em;border-top:4px solid var(--ink)}
+h3{font-size:1.12rem;margin:1.3em 0 .3em}
+.cap{color:var(--mut);margin:0 0 8px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+nav a{font-size:.78rem;text-decoration:none;background:#fff;border:1px solid var(--line);color:var(--ink);padding:3px 10px;border-radius:99px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 15px;margin:10px 0}
+.box{border-left:6px solid;border-radius:10px;padding:10px 14px;margin:12px 0}
+.k5{border-color:var(--orange);background:#fff7ed}
+.say{border-color:var(--blue);background:#eff6ff}
+.tip{border-color:var(--green);background:#f0fdf4}
+.warn{border-color:var(--red);background:#fef2f2}
+.box b.t{display:block}
+.en{background:#eef2ff;color:#3730a3;border-radius:4px;padding:0 5px;font-size:.92em}
+.big{font-size:1.25rem;font-weight:700;border:3px solid var(--blue);background:#eff6ff;border-radius:14px;padding:14px 16px}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:inherit}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:8px 14px}
+details.q{border-left:6px solid var(--violet)}
+summary{cursor:pointer;font-weight:600}
+details[open] summary{margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.card{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 12px}
+.bridge{display:grid;grid-template-columns:1fr 34px 1fr;gap:6px;align-items:stretch;margin:6px 0}
+.bridge .l{background:#dbeafe;border:2px solid var(--blue);border-radius:10px;padding:7px 10px;font-size:.92rem}
+.bridge .r{background:#dcfce7;border:2px solid var(--green);border-radius:10px;padding:7px 10px;font-size:.92rem}
+.bridge .a{display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--mut)}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.three div{border-radius:12px;padding:10px;font-size:.92rem}
+.chk label{display:block;padding:5px 0;cursor:pointer}
+.chk input{transform:scale(1.3);margin-right:8px}
+.star{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.star div{border-radius:12px;padding:8px 10px;color:#fff;font-size:.88rem}
+.star b{display:block;font-size:1.5rem;line-height:1}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;color:#fff;border-radius:99px;padding:1px 9px;vertical-align:middle}
+.t1{background:var(--green)}.t2{background:var(--orange)}.t3{background:var(--red)}
+@media(max-width:600px){.three,.star{grid-template-columns:1fr}.bridge{grid-template-columns:1fr}.bridge .a{transform:rotate(90deg);height:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Συνέντευξη για CSV Analyst: ο οδηγός σου</h1>
+<p class="cap">Γραμμένο σαν να εξηγώ σε παιδί 5 ετών. Οι αγγλικοί όροι μένουν, γιατί θα τους ακούσεις, αλλά εξηγούνται αμέσως. Βασίζεται στο βιογραφικό σου και στα πράγματα που έχεις κάνει, όχι σε γενικά τσιτάτα.</p>
+
+<nav>
+<a href="#s0">0 Τι θέλουν</a><a href="#s1">1 Ο χάρτης</a><a href="#s2">2 Η γέφυρα</a><a href="#s3">3 Πες μου για σένα</a><a href="#s4">4 Ερωτήσεις</a><a href="#s5">5 STAR</a><a href="#s6">6 Σενάρια</a><a href="#s7">7 Δεν ξέρω</a><a href="#s8">8 Warning Letter</a><a href="#s9">9 Δύσκολες</a><a href="#s10">10 Δικές σου</a><a href="#s11">11 Συμβουλές</a>
+</nav>
+
+<h2 id="s0">0. Τι θέλουν πραγματικά (σε 20 δευτερόλεπτα)</h2>
+<div class="big">Θέλουν κάποιον προσεκτικό, που ακολουθεί κανόνες, μαθαίνει γρήγορα και λέει την αλήθεια όταν δεν ξέρει.</div>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>
+Φαντάσου ότι ψάχνουν κάποιον να προσέχει ένα ζυγαριά που ζυγίζει φάρμακα. Δεν χρειάζεται να είσαι ο πιο έξυπνος του κόσμου. Χρειάζεται να είσαι αυτός που <b>δεν λέει «εντάξει» όταν δεν είναι εντάξει</b>, και που <b>γράφει τι έκανε</b>.</div>
+<div class="three">
+<div style="background:#dcfce7;border:2px solid #16a34a"><b>1. Προσεκτικός</b><br>ελέγχεις, γράφεις, δεν παρακάμπτεις</div>
+<div style="background:#dbeafe;border:2px solid #2563eb"><b>2. Μαθαίνεις</b><br>δεν ξέρεις τα πάντα, αλλά ξέρεις πώς θα τα μάθεις</div>
+<div style="background:#ffedd5;border:2px solid #ea580c"><b>3. Είσαι ειλικρινής</b><br>«αυτό το έχω κάνει, αυτό όχι ακόμα»</div>
+</div>
+<div class="box tip"><b class="t">Καλά νέα</b>
+Αυτά τα τρία τα έχεις ήδη δείξει στη ζωή σου (βλ. ενότητα 2). Δεν χρειάζεται να τα φτιάξεις σήμερα. Χρειάζεται να τα δείξεις.</div>
+
+<h2 id="s1">1. Ο χάρτης της συνέντευξης</h2>
+<p class="cap">Τυπικά (δεν ξέρω την ακριβή μορφή, γι' αυτό το λέω «τυπικά»). Σε κάθε στάση ξέρεις τι να κάνεις.</p>
+<div class="panel">
+<svg viewBox="0 0 800 250" role="img" aria-label="Χάρτης συνέντευξης">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g stroke="#9ca3af" stroke-width="3" fill="none" marker-end="url(#ar)"><path d="M148,80 L170,80"/><path d="M308,80 L330,80"/><path d="M468,80 L490,80"/><path d="M628,80 L650,80"/></g>
+<g font-weight="700" font-size="14" text-anchor="middle">
+<rect x="10" y="40" width="138" height="80" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/><text x="79" y="70">1. Γνωριμία</text><text x="79" y="92" font-size="12" font-weight="400">«Πες μου για σένα»</text>
+<rect x="170" y="40" width="138" height="80" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="239" y="70">2. Γιατί εμείς</text><text x="239" y="92" font-size="12" font-weight="400">κίνητρο &amp; ρόλος</text>
+<rect x="330" y="40" width="138" height="80" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="399" y="70">3. Τεχνικά</text><text x="399" y="92" font-size="12" font-weight="400">IQ/OQ/PQ, ALCOA...</text>
+<rect x="490" y="40" width="138" height="80" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="559" y="70">4. Σενάρια</text><text x="559" y="92" font-size="12" font-weight="400">«τι θα έκανες αν...»</text>
+<rect x="650" y="40" width="140" height="80" rx="14" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="720" y="70">5. Δικές σου</text><text x="720" y="92" font-size="12" font-weight="400">ερωτήσεις προς αυτούς</text></g>
+<g font-size="13" text-anchor="middle" fill="#374151">
+<text x="79" y="150">60-90 δευτ.</text><text x="79" y="168">Η ιστορία σου</text>
+<text x="239" y="150">Ειλικρινές</text><text x="239" y="168">και συγκεκριμένο</text>
+<text x="399" y="150">Απλά λόγια</text><text x="399" y="168">+ ένα παράδειγμα</text>
+<text x="559" y="150">Σκέψου φωναχτά</text><text x="559" y="168">βήμα-βήμα</text>
+<text x="720" y="150">Πάντα πες</text><text x="720" y="168">2-3 ερωτήσεις</text></g>
+<rect x="10" y="196" width="780" height="40" rx="10" fill="#f3f4f6"/>
+<text x="400" y="221" text-anchor="middle" font-size="14">Σε όλες τις στάσεις: <tspan font-weight="700">απάντηση → παράδειγμα → σύνδεση με τη δουλειά τους</tspan></text>
+</svg></div>
+
+<h2 id="s2">2. Η γέφυρα: από αυτά που έκανες σε αυτά που θέλουν</h2>
+<p class="cap">Αριστερά αυτά που έκανες (από το βιογραφικό σου). Δεξιά τι ψάχνει ο ρόλος. Αυτή είναι η «πώληση» του εαυτού σου: να δείξεις τη γέφυρα και όχι να λες γενικά «είμαι καλός».</p>
+<div class="bridge"><div class="l"><b>Night audit / κλείσιμο ημέρας</b><br>κάθε βράδυ συμφωνούσες τις κινήσεις της ημέρας και έκλεινες τα βιβλία πριν την παράδοση στην πρωινή βάρδια, μόνος υπεύθυνος.</div><div class="a">→</div><div class="r"><b>Data integrity, ALCOA+</b><br>τα δεδομένα συμφωνούν, είναι πλήρη, αναγνωρίσιμα, και το κλείσιμο υπογράφεται από κάποιον υπεύθυνο.</div></div>
+<div class="bridge"><div class="l"><b>Αγροτικός συνεταιρισμός</b><br>αυστηρές προθεσμίες, εργαλείο μαζικής καταχώρησης και ελέγχου πάνω σε υπάρχον σύστημα, ~40% λιγότερος χρόνος και λιγότερα λάθη, γραπτές διαδικασίες για το προσωπικό.</div><div class="a">→</div><div class="r"><b>Business applications (ERP) + SOPs</b><br>δουλεύεις με υπάρχοντα επιχειρησιακά συστήματα, ελέγχεις εισαγωγή δεδομένων, γράφεις οδηγίες που τις ακολουθούν άλλοι.</div></div>
+<div class="bridge"><div class="l"><b>Smart Building Programming (Επίπεδο 1)</b><br>εκπαίδευση σε προγραμματισμό έξυπνων κτιρίων.</div><div class="a">→</div><div class="r"><b>BMS / EMS (το θέμα των Σαπών)</b><br>ξέρεις τι είναι αισθητήρες, controllers, alarms σε κτίριο. Δεν είναι εμπειρία σε εργοστάσιο, αλλά είναι η ίδια οικογένεια συστημάτων.</div></div>
+<div class="bridge"><div class="l"><b>IT Operations (tickets, Linux servers, Docker)</b></div><div class="a">→</div><div class="r"><b>IT policies, servers, backup, πρόσβαση</b><br>καταλαβαίνεις τι ζητά το IT από ένα validated σύστημα.</div></div>
+<div class="bridge"><div class="l"><b>Μέτρηση πριν και μετά από αλλαγή (OpenCouncil, 117 συνεδριάσεις)</b></div><div class="a">→</div><div class="r"><b>Test και regression test</b><br>δεν λες «βελτιώθηκε», το αποδεικνύεις με μέτρηση. Είναι ακριβώς το πνεύμα του validation.</div></div>
+<div class="bridge"><div class="l"><b>Πυρασφάλεια, Πολεμική Αεροπορία</b><br>διαδικασίες ασφαλείας υπό πίεση.</div><div class="a">→</div><div class="r"><b>Ακολουθώ τη διαδικασία, δεν την παρακάμπτω</b><br>η κουλτούρα GxP βασίζεται σε αυτό.</div></div>
+<div class="bridge"><div class="l"><b>MEng Ηλεκτρολόγος και Μηχανικός Υπολογιστών (ΑΠΘ)</b></div><div class="a">→</div><div class="r"><b>Τεχνική βάση</b><br>καταλαβαίνεις αισθητήρες, σήματα, λογισμικό, δίκτυα και μαθαίνεις γρήγορα τα νέα.</div></div>
+
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>
+Φαντάσου ότι χτίζεις γέφυρα με τουβλάκια. Αριστερά έχεις τουβλάκια από το δικό σου παιχνίδι. Δεξιά είναι η όχθη που θέλεις να φτάσεις. Δεν χρειάζεσαι καινούρια τουβλάκια. Χρειάζεσαι να τα βάλεις στη σωστή σειρά και να πεις «πάτα εδώ».</div>
+
+<h3>Το ειλικρινές γράφημα: τι έχεις, τι μαθαίνεις, τι δεν έχεις</h3>
+<div class="three">
+<div style="background:#dcfce7;border:2px solid #16a34a"><b>Έχω ήδη</b><ul style="margin:.3em 0 0 1em;padding:0"><li>έλεγχος και συμφωνία δεδομένων</li><li>γραπτές διαδικασίες</li><li>δουλειά με υπάρχοντα συστήματα</li><li>τεχνική βάση, IT, Linux</li><li>μέτρηση πριν/μετά</li></ul></div>
+<div style="background:#fef9c3;border:2px solid #ca8a04"><b>Μαθαίνω ενεργά</b><ul style="margin:.3em 0 0 1em;padding:0"><li>GAMP 5, IQ/OQ/PQ</li><li>Annex 11, 21 CFR Part 11</li><li>Data integrity (ALCOA+)</li><li>Validation lifecycle</li></ul></div>
+<div style="background:#fee2e2;border:2px solid #dc2626"><b>Δεν έχω (ακόμα)</b><ul style="margin:.3em 0 0 1em;padding:0"><li>εμπειρία σε φαρμακοβιομηχανία / GxP</li><li>γράψιμο πρωτοκόλλων IQ/OQ/PQ σε πραγματικό project</li><li>συμμετοχή σε επιθεώρηση</li></ul></div>
+</div>
+<p class="cap">Πες το ανοιχτά. Αυτό θα σε κάνει πιο πιστευτό, όχι λιγότερο. Στο βιογραφικό σου όσα βλέπεις είναι αληθινά. Αν κάτι δεν είναι ακριβές (π.χ. ποσοστά), μην το πεις με μεγαλύτερη σιγουριά από ό,τι το ξέρεις.</p>
+
+<h2 id="s3">3. «Πες μου για τον εαυτό σου» (60-90 δευτερόλεπτα)</h2>
+<p class="cap">Δομή 3 κομματιών: <b>πού ήμουν → τι έμαθα → γιατί αυτός ο ρόλος</b>. Παρακάτω ένα πρότυπο. Αλλαξέ το με δικά σου λόγια.</p>
+<div class="box say"><b class="t">Ελληνικά</b>
+«Είμαι Ηλεκτρολόγος Μηχανικός και Μηχανικός Υπολογιστών από το ΑΠΘ. Μετά τις σπουδές μου δούλεψα σε πράγματα που έχουν κοινό ότι οι διαδικασίες και τα δεδομένα πρέπει να είναι σωστά: έκανα το κλείσιμο της ημέρας σε ξενοδοχείο, όπου κάθε βράδυ συμφωνούσα τα νούμερα πριν παραδώσω. Σε έναν αγροτικό συνεταιρισμό έφτιαξα εργαλείο πάνω στο υπάρχον σύστημα που έκοψε τον χρόνο καταχώρησης περίπου 40% και έγραψα οδηγίες για το προσωπικό. Έκανα και IT support με tickets και Linux servers, και έχω εκπαιδευτεί σε προγραμματισμό έξυπνων κτιρίων. Θέλω να το κάνω επάγγελμα: να δουλεύω με συστήματα όπου η ακρίβεια και η τεκμηρίωση μετράνε πραγματικά. Μελετώ GAMP 5, Annex 11 και data integrity, και το EMS των Σαπών είναι ακριβώς το είδος του προβλήματος που θέλω να δουλέψω.»</div>
+<div class="box say"><b class="t">English (30-40 sec)</b>
+«I'm an electrical and computer engineer from Aristotle University. My work so far has one thing in common: correct data and written procedures. I ran nightly close-out at a hotel, reconciling the day's figures before handover. At an agricultural cooperative I built a tool on top of their existing system that cut data entry time by roughly 40% and wrote procedures for staff. I also did IT support and server work. I'm now moving into computer system validation, and I've been studying GAMP 5, Annex 11 and data integrity. Environmental monitoring is a natural fit for me because of my building-automation training.»</div>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>
+Η ιστορία σου είναι σαν ένα τρενάκι με 3 βαγόνια: <b>Από πού ήρθα</b>, <b>Τι έμαθα στον δρόμο</b>, <b>Πού θέλω να πάω</b>. Αν χάσεις το τρενάκι, πες πρώτα το τρίτο βαγόνι και μετά ξαναδές τα άλλα.</div>
+<div class="box warn"><b class="t">Μην πεις</b>
+«Δεν έχω εμπειρία, αλλά...» ως πρώτη φράση. Ξεκίνα με αυτό που έχεις. Το κενό το αναφέρεις μόνο όταν σε ρωτήσουν.</div>
+
+<h2 id="s4">4. Πιθανές ερωτήσεις</h2>
+<p class="cap">Άνοιξε μία τη φορά. Πρώτα απάντησε φωναχτά 20 δευτερόλεπτα, μετά διάβασε.</p>
+
+<h3>Κίνητρο και προφίλ</h3>
+<details class="q"><summary>Γιατί CSV και όχι software engineering;</summary>
+<p><b>Ιδέα:</b> μου αρέσει να αποδεικνύω ότι ένα σύστημα δουλεύει σωστά, όχι μόνο να το φτιάχνω.</p>
+<p class="say box" style="margin:6px 0">«Στις δουλειές που έκανα, αυτό που μου άρεσε περισσότερο ήταν το σημείο όπου ελέγχεις ότι κάτι είναι σωστό: το κλείσιμο της ημέρας, η μέτρηση πριν και μετά από μια αλλαγή. Το validation είναι αυτό ως επάγγελμα, και σε φαρμακευτικό περιβάλλον έχει πραγματική επίπτωση.»</p>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Άλλοι χτίζουν το παιχνίδι. Εσύ είσαι αυτός που λέει «πάμε να δοκιμάσουμε αν δεν σπάει».</div>
+<p><b>Πρόσεξε:</b> πες το μόνο αν το πιστεύεις. Αν η αλήθεια σου είναι «ήθελα ρόλο σε κανονισμένο περιβάλλον», πες αυτήν.</p></details>
+
+<details class="q"><summary>Γιατί Pharmathen;</summary>
+<p class="say box" style="margin:6px 0">«Είναι ελληνική εταιρεία με πολύπλοκα προϊόντα, και με ενδιαφέρει να δουλέψω σε μέρος όπου η ποιότητα των συστημάτων έχει άμεση σημασία. Ξέρω ότι η εταιρεία διανύει μια περίοδο εστίασης στη συμμόρφωση, και θεωρώ ότι εκεί μαθαίνει κανείς περισσότερο και συνεισφέρει πιο άμεσα.»</p>
+<p><b>Μην πεις:</b> «γιατί έχετε προβλήματα και θα τα λύσω». Δεν ξέρεις την εσωτερική εικόνα.</p></details>
+
+<details class="q"><summary>Γιατί να σε προσλάβουμε χωρίς εμπειρία στο φαρμακευτικό;</summary>
+<p class="say box" style="margin:6px 0">«Δεν έχω εμπειρία σε GxP, και το λέω ανοιχτά. Έχω όμως δουλέψει σε ρόλους όπου ένα λάθος στα δεδομένα είχε συνέπειες, έχω τη τεχνική βάση για να καταλαβαίνω τα συστήματα, και μαθαίνω γρήγορα. Μέσα σε λίγες εβδομάδες έχω μελετήσει το πλαίσιο και μπορώ να σας το εξηγήσω. Θα προτιμούσα να ξεκινήσω κάτω από καθοδήγηση και να αναλάβω σταδιακά.»</p>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Δεν λες «είμαι έτοιμος για όλα». Λες «ξέρω ήδη να περπατάω, δείξτε μου το δικό σας μονοπάτι».</div></details>
+
+<details class="q"><summary>Ποιες είναι οι αδυναμίες σου;</summary>
+<p class="say box" style="margin:6px 0">«Η έλλειψη εμπειρίας σε GxP περιβάλλον. Το αντιμετωπίζω μελετώντας συστηματικά το πλαίσιο και ζητώντας feedback νωρίς. Σε νέο αντικείμενο, μου παίρνει λίγο χρόνο να αισθανθώ σίγουρος να αποφασίζω μόνος, γι' αυτό ρωτάω πριν υποθέσω.»</p>
+<p><b>Κανόνας:</b> αδυναμία αληθινή + τι κάνεις γι' αυτήν. Όχι «είμαι υπερβολικός τελειομανής».</p></details>
+
+<details class="q"><summary>Πού σε βλέπεις σε 3-5 χρόνια;</summary>
+<p class="say box" style="margin:6px 0">«Να είμαι ο άνθρωπος που ηγείται ενός validation project από την αρχή μέχρι το τέλος, και να έχω καλή γνώση του πώς δένουν τα συστήματα (ERP, MES, LIMS, EMS) με το data integrity.»</p></details>
+
+<h3>Τεχνικές (σύντομα, με το σχήμα στο μυαλό)</h3>
+<details class="q"><summary>Τι είναι validation;</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Είναι να αποδείξεις με χαρτιά ότι ένα μηχάνημα κάνει σωστά τη δουλειά που λέει ότι κάνει.</div>
+<p><b>Πες:</b> «Τεκμηριωμένη απόδειξη ότι ένα σύστημα κάνει σταθερά αυτό που προορίζεται να κάνει. Π.χ. ένα EMS καταγράφει σωστά θερμοκρασία και κρατά ιστορικό alarms.»</p></details>
+
+<details class="q"><summary>Διαφορά IQ, OQ, PQ;</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Αγοράζεις ποδήλατο. <b>IQ</b>: ήρθε με όλα τα κομμάτια και είναι σωστά βιδωμένο. <b>OQ</b>: δοκιμάζεις φρένα, ταχύτητες, κουδούνι. <b>PQ</b>: το πας βόλτα στον πραγματικό δρόμο.</div>
+<p><b>Πες:</b> «IQ: σωστή εγκατάσταση. OQ: σωστή λειτουργία, και στα όρια. PQ: σωστή απόδοση στην πραγματική χρήση.»</p></details>
+
+<details class="q"><summary>Τι είναι URS;</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Η λίστα με το τι θέλεις από τα Χριστούγεννα. Πρώτα γράφεις τι θέλεις, μετά ελέγχεις αν το πήρες.</div>
+<p><b>Πες:</b> «User Requirements Specification: τι χρειάζεται ο χρήστης από το σύστημα. Κάθε απαίτηση πρέπει να είναι μετρήσιμη και να έχει test.»</p></details>
+
+<details class="q"><summary>Τι είναι ALCOA+;</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Ο κανόνας του τετραδίου στο σχολείο: γράφεις με το όνομά σου, ευανάγνωστα, τη στιγμή που το κάνεις, δεν σβήνεις και δεν κλέβεις.</div>
+<p><b>Πες:</b> Attributable (ποιος), Legible (ευανάγνωστο), Contemporaneous (τη στιγμή), Original, Accurate, και το + : Complete, Consistent, Enduring, Available.</p></details>
+
+<details class="q"><summary>Τι είναι audit trail;</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Το τετράδιο που κάθε φορά που κάποιος αλλάζει κάτι, γράφει «ποιος, τι, πότε, γιατί». Δεν σβήνεται.</div></details>
+
+<details class="q"><summary>Τι είναι GAMP 5 και οι κατηγορίες;</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Έτοιμο ψωμί (3), έξυπνος φούρνος που τον ρυθμίζεις (4), φούρνος που τον φτιάχνεις μόνος σου (5). Όσο περισσότερο το έφτιαξες, τόσο περισσότερο το δοκιμάζεις.</div>
+<p>Δες τη σελίδα GAMP και EMS για βάθος. Το EMS είναι κυρίως cat. 4.</p></details>
+
+<details class="q"><summary>Τι θα έλεγες σε κάποιον που θεωρεί το validation «γραφειοκρατία»;</summary>
+<p class="say box" style="margin:6px 0">«Το validation δεν είναι χαρτιά για τα χαρτιά. Αν ένα σύστημα δίνει λάθος δεδομένα, χάνεται η δουλειά όλων. Τα χαρτιά είναι η απόδειξη ότι δεν συνέβη αυτό.»</p></details>
+
+<h2 id="s5">5. Η μέθοδος STAR: πώς λες μια ιστορία από τη δουλειά σου</h2>
+<p class="cap">Για ερωτήσεις «πες μου μια φορά που...». 4 κουτάκια, 60-90 δευτερόλεπτα.</p>
+<div class="star">
+<div style="background:#2563eb"><b>S</b>Situation: τι γινόταν;</div>
+<div style="background:#16a34a"><b>T</b>Task: τι ήταν δική σου δουλειά;</div>
+<div style="background:#ea580c"><b>A</b>Action: τι έκανες ΕΣΥ;</div>
+<div style="background:#7c3aed"><b>R</b>Result: τι άλλαξε, με νούμερο αν υπάρχει</div>
+</div>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Σαν παραμύθι: <i>Μια φορά κι έναν καιρό</i> (S), <i>έπρεπε να</i> (T), <i>και τότε έκανα</i> (A), <i>και στο τέλος</i> (R).</div>
+
+<h3>Παράδειγμα 1: δουλειά με προθεσμίες και λάθη (συνεταιρισμός)</h3>
+<div class="panel">
+<b>S:</b> Περίοδος αιχμής δηλώσεων, αυστηρές προθεσμίες, πολλά στοιχεία να περαστούν.<br>
+<b>T:</b> Να περαστούν σωστά και εγκαίρως.<br>
+<b>A:</b> Έφτιαξα εργαλείο μαζικής καταχώρησης και ελέγχου πάνω στο υπάρχον σύστημα, έγραψα απλές οδηγίες για τα μηνύματα λάθους, και γραπτές διαδικασίες για το προσωπικό.<br>
+<b>R:</b> Περίπου 40% λιγότερος χρόνος καταχώρησης και λιγότερα λάθη πληκτρολόγησης. <span class="cap">(Το 40% είναι εκτίμηση. Πες «περίπου».)</span><br>
+<b>Σύνδεση με CSV:</b> «Η ίδια λογική: δεν αρκεί να δουλεύει, πρέπει να γράφεται πώς να το χρησιμοποιείς και να ελέγχεται.»
+</div>
+
+<h3>Παράδειγμα 2: υπευθυνότητα (night audit)</h3>
+<div class="panel">
+<b>S:</b> Μόνος υπεύθυνος τη νύχτα σε μεγάλο ξενοδοχείο.<br>
+<b>T:</b> Να κλείσει η ημέρα με συμφωνημένες κινήσεις και ταμείο, πριν φτάσει η πρωινή βάρδια.<br>
+<b>A:</b> Συμφωνούσα τις κινήσεις, έλεγχα το ταμείο, έβγαζα τις ημερήσιες αναφορές, και παρέδιδα γραπτά.<br>
+<b>R:</b> Η πρωινή βάρδια ξεκινούσε με κλεισμένη και ελεγμένη ημέρα.<br>
+<b>Σύνδεση με CSV:</b> «Συνήθισα να μην προχωράω όταν τα νούμερα δεν συμφωνούν. Το ίδιο κάνω σε ένα test που αποτυγχάνει.»
+</div>
+
+<h3>Παράδειγμα 3: μέτρηση πριν/μετά (OpenCouncil)</h3>
+<div class="panel">
+<b>S:</b> Στόχος να διορθώνουν οι εθελοντές λιγότερα λάθη στα πρακτικά.<br>
+<b>T:</b> Να βελτιωθεί η απομαγνητοφώνηση.<br>
+<b>A:</b> Έλεγχος των δεδομένων εκπαίδευσης και μέτρηση σε 117 συνεδριάσεις πριν και μετά από κάθε αλλαγή.<br>
+<b>R:</b> Αποφάσεις με στοιχεία και όχι εντυπώσεις. <span class="cap">(Πρόσθεσε μόνο αποτελέσματα που είναι αληθινά και ξέρεις.)</span><br>
+<b>Σύνδεση με CSV:</b> «Δεν αλλάζεις κάτι χωρίς να ξέρεις τι άλλαξε. Είναι η λογική του change control και του regression test.»
+</div>
+
+<h2 id="s6">6. Σενάρια: «τι θα έκανες αν...»</h2>
+<p class="cap">Στα σενάρια δεν περιμένουν την τέλεια απάντηση. Περιμένουν να δουν <b>πώς σκέφτεσαι</b>. Μίλα φωναχτά: «πρώτα θα..., μετά θα...».</p>
+<div class="panel">
+<svg viewBox="0 0 760 200" role="img" aria-label="Η αλυσίδα σκέψης σε σενάριο">
+<g font-weight="700" font-size="14" text-anchor="middle">
+<rect x="10" y="50" width="130" height="70" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/><text x="75" y="80">1. Σταμάτα</text><text x="75" y="100" font-size="11" font-weight="400">μην διορθώσεις στα κρυφά</text>
+<rect x="160" y="50" width="130" height="70" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="225" y="80">2. Γράψε</text><text x="225" y="100" font-size="11" font-weight="400">τι ακριβώς έγινε</text>
+<rect x="310" y="50" width="130" height="70" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="375" y="80">3. Βρες αιτία</text><text x="375" y="100" font-size="11" font-weight="400">γιατί έγινε</text>
+<rect x="460" y="50" width="130" height="70" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="525" y="80">4. Ενημέρωσε</text><text x="525" y="100" font-size="11" font-weight="400">QA / υπεύθυνο</text>
+<rect x="610" y="50" width="130" height="70" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="675" y="80">5. Διόρθωσε</text><text x="675" y="100" font-size="11" font-weight="400">με έλεγχο αλλαγών</text></g>
+<g stroke="#9ca3af" stroke-width="3" fill="none"><path d="M140,85 L160,85"/><path d="M290,85 L310,85"/><path d="M440,85 L460,85"/><path d="M590,85 L610,85"/></g>
+<text x="380" y="165" text-anchor="middle" font-size="14" fill="#374151">Σχεδόν κάθε σενάριο λύνεται με αυτή τη σειρά. Δοκίμασέ την πρώτα.</text>
+</svg></div>
+
+<details class="q"><summary>Σενάριο 1. Ένα test αποτυγχάνει και ο προϊστάμενος λέει «ξανάτρεξέ το μέχρι να περάσει».</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Δεν σβήνεις το «F» στο διαγώνισμα και ξαναγράφεις μέχρι να βγει «Α». Κρατάς και τα δύο και βρίσκεις γιατί έπεσες.</div>
+<p class="say box" style="margin:6px 0">«Καταλαβαίνω την πίεση. Αν το ξανατρέξω χωρίς να ξέρω γιατί απέτυχε, δεν αποδεικνύω τίποτα. Θα το καταγράψω, θα βρούμε γρήγορα την αιτία, και μετά το ξανατρέχω κρατώντας και τα δύο αποτελέσματα.»</p></details>
+
+<details class="q"><summary>Σενάριο 2. Βρίσκεις ότι ένα σύστημα δουλεύει χρόνια χωρίς καμία τεκμηρίωση validation.</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Βρίσκεις ένα παιχνίδι που παίζουν όλοι χρόνια, αλλά κανείς δεν έχει το κουτί με τους κανόνες. Δεν το πετάς αμέσως. Πρώτα βλέπεις αν είναι επικίνδυνο, μετά γράφεις τους κανόνες.</div>
+<ol><li>Δεν πανικοβάλλομαι, ενημερώνω QA.</li><li>Risk assessment: τι επηρεάζει; Προϊόν, ασθενής, δεδομένα;</li><li>Αν υπάρχει κίνδυνος: προσωρινά μέτρα, ίσως σταματά η χρήση.</li><li>Retrospective validation: URS, έλεγχος προμηθευτή, IQ/OQ.</li></ol></details>
+
+<details class="q"><summary>Σενάριο 3. Ένας συνάδελφος έγραψε αποτελέσματα από μνήμης αργότερα.</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Σαν να γράφεις την εργασία την επόμενη μέρα και να λες ότι την έκανες χθες.</div>
+<p>Παραβιάζεται το <b>Contemporaneous</b> του ALCOA+. Δεν κατηγορώ. Ανοίγω deviation, αξιολογώ την επίπτωση, και βλέπω αν η διαδικασία κάνει δύσκολη την άμεση καταγραφή. <i>(Σχετικό με το εύρημα της FDA.)</i></p></details>
+
+<details class="q"><summary>Σενάριο 4. Ένας administrator άλλαξε δεδομένα.</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Κάποιος έσβησε κάτι στο τετράδιο. Το κλειδί είναι το κρυφό τετράδιο που γράφει ποιος το έκανε (audit trail).</div>
+<p>Βλέπω τον audit trail (ποιος, τι, πότε, γιατί). Ενημερώνω QA. Ερευνώ. Ελέγχω αν ο admin έχει υπερβολικά δικαιώματα (segregation of duties).</p></details>
+
+<details class="q"><summary>Σενάριο 5. Ο προμηθευτής αρνείται audit.</summary>
+<p>Ζητώ εναλλακτικά: πιστοποιητικά (π.χ. ISO), ερωτηματολόγιο, τεκμηρίωση των δικών τους tests. Αν το σύστημα είναι κρίσιμο και δεν δίνουν τίποτα, αυξάνω τα δικά μας tests και καταγράφω το ρίσκο.</p></details>
+
+<details class="q"><summary>Σενάριο 6. Σου ζητούν κάτι που δεν έχεις ξανακάνει (π.χ. να γράψεις OQ protocol).</summary>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Δεν είπες «δεν μπορώ». Λες «ποιο είναι το καλούπι που χρησιμοποιείτε;»</div>
+<p class="say box" style="margin:6px 0">«Δεν έχω γράψει OQ σε παραγωγικό περιβάλλον. Θα ξεκινούσα από το template σας και από ένα παρόμοιο έγγραφο που έχει εγκριθεί, θα έγραφα πρώτο draft, και θα το έβλεπα με κάποιον έμπειρο πριν προχωρήσω.»</p></details>
+
+<details class="q"><summary>Σενάριο 7. Διαφωνείς με έναν senior για το πώς να γίνει ένα test.</summary>
+<p>Ρωτάω πρώτα γιατί το βλέπει έτσι (μπορεί να ξέρει κάτι που δεν ξέρω). Αν επιμένω, δείχνω στοιχεία ή την οδηγία. Αν συνεχίζουμε να διαφωνούμε και αφορά ποιότητα, το φέρνω στο QA. Δεν κάνω κάτι σιωπηλά διαφορετικά.</p></details>
+
+<details class="q"><summary>Σενάριο 8. Υπάρχει πίεση για προθεσμία και δεν προλαβαίνεις να κάνεις όλα τα tests.</summary>
+<p>Δεν παραλείπω σιωπηλά. Εξηγώ ποια tests είναι κρίσιμα (risk-based), προτείνω τι μπορεί να μπει σε επόμενη φάση, και αφήνω την απόφαση να ληφθεί με το QA και τον υπεύθυνο, γραπτά.</p></details>
+
+<h2 id="s7">7. Αν δεν ξέρεις την απάντηση</h2>
+<p class="cap">Θα τύχει. Είναι φυσιολογικό. Η αντίδρασή σου μετράει περισσότερο από την απάντηση.</p>
+<div class="panel">
+<svg viewBox="0 0 760 270" role="img" aria-label="Τι κάνεις αν δεν ξέρεις">
+<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g font-weight="700" font-size="14" text-anchor="middle">
+<rect x="270" y="8" width="220" height="44" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/><text x="380" y="36">Δεν ξέρω την απάντηση</text>
+<rect x="270" y="80" width="220" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="380" y="108">1. Ανάσα. Πες «ας το σκεφτώ»</text>
+<rect x="20" y="160" width="220" height="70" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="130" y="185">2α. Ξέρω κάτι κοντινό</text><text x="130" y="205" font-size="12" font-weight="400">«Αυτό που ξέρω είναι...»</text>
+<rect x="270" y="160" width="220" height="70" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="380" y="185">2β. Σκέψου φωναχτά</text><text x="380" y="205" font-size="12" font-weight="400">«Θα ξεκινούσα από...»</text>
+<rect x="520" y="160" width="220" height="70" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="630" y="185">2γ. Δεν το ξέρω</text><text x="630" y="205" font-size="12" font-weight="400">«Θα το έψαχνα στο...»</text></g>
+<g stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#ar2)"><path d="M380,52 L380,78"/><path d="M340,124 L170,158"/><path d="M380,124 L380,158"/><path d="M420,124 L590,158"/></g>
+<text x="380" y="256" text-anchor="middle" font-size="13" fill="#374151">Ποτέ: να εφεύρεις απάντηση. Ένα επινοημένο γεγονός χάνει την εμπιστοσύνη για όλα τα υπόλοιπα.</text>
+</svg></div>
+<div class="box say"><b class="t">Φράσεις για αυτή τη στιγμή</b>
+• «Δεν το έχω δουλέψει ακριβώς. Αυτό που ξέρω σχετικό είναι... και θα το προσέγγιζα έτσι.»<br>
+• «Δεν θυμάμαι τον ακριβή αριθμό, θα τον έλεγχα στο κείμενο.»<br>
+• «Μπορώ να σας πω τη λογική, και να επιβεβαιώσω το ακριβές με τη διαδικασία σας;»<br>
+• «Θέλετε να δώσω παράδειγμα ή πιο γενικά;»</div>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Όταν χαθείς στο σούπερ μάρκετ, δεν κάνεις ότι ξέρεις πού είναι η μαμά. Ρωτάς τον ταμία. Οι μεγάλοι εκτιμούν αυτόν που ρωτά σωστά.</div>
+
+<h2 id="s8">8. Αν σε ρωτήσουν για το Warning Letter</h2>
+<div class="box warn"><b class="t">Τι είναι δημόσια γνωστό (από τα έγγραφα της FDA)</b>
+Import Alert στις 23.4.2026 και Warning Letter στις 27.5.2026 για τις εγκαταστάσεις των Σαπών. Ευρήματα που αφορούν τη θέση: όργανα περιβαλλοντικής παρακολούθησης που δεν αποθήκευαν δεδομένα και ιστορικό alarms, ανεξέλεγκτες φόρμες που τυπώνονταν από το IQVIA, και εργαστηριακή τεκμηρίωση που δεν γινόταν τη στιγμή της εργασίας. Δεν ξέρεις τι έχουν κάνει από τότε.</div>
+<p><b>Σωστή στάση:</b> δείξε ότι ξέρεις και ότι το βλέπεις ως ευκαιρία να βοηθήσεις, όχι ως κουτσομπολιό.</p>
+<div class="box say"><b class="t">Αν σε ρωτήσουν «τι γνωρίζεις για την κατάστασή μας;»</b>
+«Έχω διαβάσει τα δημόσια έγγραφα της FDA. Αυτό που μου έκανε εντύπωση είναι ότι τα ευρήματα αφορούν data integrity και ελέγχους συστημάτων: καταγραφή δεδομένων, ιστορικό alarms, ελεγχόμενες φόρμες. Δεν γνωρίζω τι έχετε ήδη υλοποιήσει, και θα ήθελα να καταλάβω πού βρίσκεται η ομάδα.»</div>
+<div class="box warn"><b class="t">Μην πεις</b>
+Μην κρίνεις την εταιρεία («δεν έπρεπε να...»). Μην υποσχεθείς «θα το διορθώσω εγώ». Μην εφεύρεις λεπτομέρειες.</div>
+
+<h2 id="s9">9. Δύσκολες ερωτήσεις που μπορεί να έρθουν</h2>
+<details class="q"><summary>Πώς θα μετακινείσαι προς τις Σάπες;</summary>
+<p>Είναι πρακτική ερώτηση και πολύ πιθανή. Έχε έτοιμη μία ειλικρινή απάντηση: πού μένεις τώρα, αν σκοπεύεις να μετακομίσεις, πώς θα πηγαίνεις. Μην βάλεις αριθμούς που δεν έχεις ελέγξει. Πες την πραγματική σου κατάσταση.</p></details>
+<details class="q"><summary>Γιατί αλλάζεις από software / AI σε CSV;</summary>
+<p class="say box" style="margin:6px 0">«Το software και το AI μου έδωσαν τεχνική βάση. Αυτό που θέλω τώρα είναι να δουλέψω σε περιβάλλον όπου η ποιότητα και η τεκμηρίωση είναι στον πυρήνα της δουλειάς. Το validation συνδυάζει τα δύο.»</p></details>
+<details class="q"><summary>Οι τελευταίες δουλειές σου ήταν σύντομες. Γιατί;</summary>
+<p>Πες την αλήθεια χωρίς απολογία: εποχιακές θέσεις, project-based, και ότι ψάχνεις σταθερή επαγγελματική κατεύθυνση. Δώσε ένα παράδειγμα ότι ολοκλήρωσες αυτό που ανέλαβες (π.χ. το εργαλείο στον συνεταιρισμό).</p></details>
+<details class="q"><summary>Μιλάς αγγλικά; Θα χρειαστεί να γράφεις τεκμηρίωση στα αγγλικά.</summary>
+<p>Το βιογραφικό σου δηλώνει άπταιστα αγγλικά. Πες το απλά, και αν σε ρωτήσουν, απάντησε για λίγα δευτερόλεπτα στα αγγλικά.</p></details>
+<details class="q"><summary>Πότε μπορείς να ξεκινήσεις; Πόσο ζητάς;</summary>
+<p>Έχε έτοιμη την ημερομηνία διαθεσιμότητας. Για μισθό: προτίμησε να ρωτήσεις το εύρος της θέσης πρώτα. Αν σε πιέσουν, πες ένα εύρος που ξέρεις ότι είναι ρεαλιστικό και ανοιχτό σε συζήτηση. Αποφάσισε από πριν το ελάχιστο που θα δεχόσουν.</p></details>
+<details class="q"><summary>Έχεις δουλέψει με Excel ή ERP;</summary>
+<p>Ναι, δούλεψες με ERP στον συνεταιρισμό (ως χρήστης και με εργαλείο πάνω του) και με PMS στο ξενοδοχείο. Πες το σαν «χρήστης και αυτοματοποίηση», όχι σαν validation.</p></details>
+
+<h2 id="s10">10. Ερωτήσεις που κάνεις εσύ</h2>
+<p class="cap">Πάντα ρώτα 2-3. Δείχνει ενδιαφέρον. Διάλεξε με βάση τη συζήτηση.</p>
+<div class="grid">
+<div class="card"><b>«Πώς είναι μια τυπική εβδομάδα για αυτόν τον ρόλο;»</b><br><span class="cap">Βλέπεις αν είναι γράψιμο, tests ή συντονισμός.</span></div>
+<div class="card"><b>«Ποια συστήματα είναι σήμερα προτεραιότητα;»</b><br><span class="cap">Θα σου πουν για το EMS.</span></div>
+<div class="card"><b>«Πώς θα με καθοδηγήσετε τους πρώτους μήνες;»</b><br><span class="cap">Δείχνει ότι θέλεις να μάθεις σωστά.</span></div>
+<div class="card"><b>«Δουλεύετε με CSA ή με το κλασικό CSV;»</b><br><span class="cap">Δείχνει ότι ξέρεις τη σύγχρονη τάση.</span></div>
+<div class="card"><b>«Πώς μοιράζεται η δουλειά με το QA και το IT;»</b><br><span class="cap">Καταλαβαίνεις τον ρόλο σου.</span></div>
+<div class="card"><b>«Ποιο είναι το πιο δύσκολο κομμάτι της θέσης;»</b><br><span class="cap">Τίμια και ανοιχτή ερώτηση.</span></div>
+</div>
+<div class="box warn"><b class="t">Μην ρωτάς πρώτα</b>για διακοπές, μισθό ή ωράριο. Αυτά έρχονται αργότερα ή όταν ρωτήσουν.</div>
+
+<h2 id="s11">11. Πρακτικές συμβουλές</h2>
+<h3>Η μορφή κάθε απάντησης</h3>
+<div class="panel">
+<svg viewBox="0 0 760 170" role="img" aria-label="Μορφή απάντησης">
+<g font-weight="700" font-size="15" text-anchor="middle">
+<rect x="20" y="20" width="220" height="90" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="130" y="55">1. Απάντηση</text><text x="130" y="78" font-size="12" font-weight="400">μία πρόταση, ευθεία</text>
+<rect x="270" y="20" width="220" height="90" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="380" y="55">2. Παράδειγμα</text><text x="380" y="78" font-size="12" font-weight="400">από τη δική σου εμπειρία</text>
+<rect x="520" y="20" width="220" height="90" rx="14" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="630" y="55">3. Σύνδεση</text><text x="630" y="78" font-size="12" font-weight="400">γιατί μετράει για τη θέση</text></g>
+<text x="380" y="145" text-anchor="middle" font-size="14" fill="#374151">Συνολικά 30-60 δευτερόλεπτα. Μετά σταμάτα και άφησέ τους να ρωτήσουν.</text>
+</svg></div>
+
+<h3>Πριν τη συνέντευξη</h3>
+<div class="panel chk">
+<label><input type="checkbox"> Διάβασα τη σελίδα «EMS» και μπορώ να πω τα 6 κομμάτια φωναχτά (αισθητήρας, δίκτυο, server, alarm, audit trail, report)</label>
+<label><input type="checkbox"> Έχω έτοιμη την ιστορία μου των 60-90 δευτ. (ενότητα 3)</label>
+<label><input type="checkbox"> Έχω 2 STAR ιστορίες έτοιμες</label>
+<label><input type="checkbox"> Έχω 3 ερωτήσεις να κάνω</label>
+<label><input type="checkbox"> Ξέρω πώς πηγαίνω εκεί / πού συνδέομαι και πόση ώρα θέλω</label>
+<label><input type="checkbox"> Έχω νερό, κινητό στο αθόρυβο, και βιογραφικό ανοιχτό</label>
+<label><input type="checkbox"> Τρώω και πίνω νερό πριν. Ο εγκέφαλος θέλει καύσιμο.</label>
+</div>
+
+<h3>Κατά τη συνέντευξη: 7 μικρά κόλπα</h3>
+<div class="grid">
+<div class="card"><b>1. Σταμάτα 2 δευτ.</b><br>Πριν απαντήσεις. Δεν φαίνεται άσχημο, φαίνεται σκεπτικό.</div>
+<div class="card"><b>2. Ρώτα αν δεν κατάλαβες</b><br>«Εννοείτε το X ή το Υ;»</div>
+<div class="card"><b>3. Μίλα αργά</b><br>Το άγχος επιταχύνει. Μια ανάσα πριν κάθε απάντηση.</div>
+<div class="card"><b>4. Μία ιδέα τη φορά</b><br>Αν χαθείς, πες «άφησέ με να το ξαναπώ».</div>
+<div class="card"><b>5. Σημειώσεις</b><br>Έχε χαρτί. Γράψε λέξεις-κλειδιά από ό,τι ρωτούν.</div>
+<div class="card"><b>6. Χρησιμοποίησε «εμείς»</b><br>όταν μιλάς για ομάδα, «εγώ» για ό,τι έκανες εσύ.</div>
+<div class="card"><b>7. Τέλος με ευχαριστώ</b><br>και μία φράση ενδιαφέροντος.</div>
+</div>
+
+<h3>Αν πάει στραβά κάτι</h3>
+<div class="panel">
+<ul>
+<li><b>Μπερδεύτηκα σε ερώτηση:</b> «Να το ξαναπώ πιο καθαρά;»</li>
+<li><b>Ξέχασα κάτι που ξέρω:</b> «Μου ξέφυγε εκείνη τη στιγμή, να περάσω παρακάτω και να επανέλθω;»</li>
+<li><b>Έκανα λάθος:</b> «Να διορθωθώ: ...». Η διόρθωση δείχνει ακριβώς την κουλτούρα που ψάχνουν.</li>
+<li><b>Τεχνικό πρόβλημα (online):</b> πες το ήρεμα, ζήτα να ξαναδοκιμάσετε.</li>
+</ul></div>
+
+<h3>Μετά</h3>
+<div class="panel">
+<ul>
+<li>Γράψε σε 5 λεπτά: ποιες ερωτήσεις ήρθαν, ποιες πήγαν καλά, τι δεν ήξερες.</li>
+<li>Στείλε σύντομο ευχαριστήριο μήνυμα την ίδια μέρα ή την επόμενη.</li>
+<li>Ό,τι δεν ήξερες, κάντο λίστα μελέτης. Ακόμα κι αν δεν πάρεις τη θέση, το κέρδος μένει.</li>
+</ul></div>
+
+<div class="box tip"><b class="t">Η τελευταία σκέψη</b>
+Δεν χρειάζεται να είσαι τέλειος. Χρειάζεται να είσαι ο άνθρωπος που προσέχει, μαθαίνει και λέει την αλήθεια. Αυτά τα τρία τα έχεις ήδη κάνει σε άλλες δουλειές. Σήμερα απλώς τα δείχνεις σε νέο πλαίσιο.</div>
+
+</div>
+</body>
+</html>
