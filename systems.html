@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ERP, MES, LIMS, SCADA, EMS/BMS: σαν να είσαι 5</title>
+<style>
+:root{--bg:#fbf8f1;--ink:#1f2937;--mut:#6b7280;--blue:#2563eb;--green:#16a34a;--orange:#ea580c;--red:#dc2626;--violet:#7c3aed;--line:#e5dfd0}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.62 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:920px;margin:0 auto;padding:16px 14px 100px}
+h1{font-size:1.9rem;margin:.2em 0;line-height:1.2}
+h2{font-size:1.45rem;margin:2.1em 0 .3em;padding-top:.5em;border-top:4px solid var(--ink)}
+h3{font-size:1.1rem;margin:1.2em 0 .3em}
+.cap{color:var(--mut);margin:0 0 8px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+nav a{font-size:.78rem;text-decoration:none;background:#fff;border:1px solid var(--line);color:var(--ink);padding:3px 10px;border-radius:99px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 15px;margin:10px 0}
+.box{border-left:6px solid;border-radius:10px;padding:10px 14px;margin:12px 0}
+.k5{border-color:var(--orange);background:#fff7ed}.say{border-color:var(--blue);background:#eff6ff}.tip{border-color:var(--green);background:#f0fdf4}.warn{border-color:var(--red);background:#fef2f2}
+.box b.t{display:block}
+.en{background:#eef2ff;color:#3730a3;border-radius:4px;padding:0 5px;font-size:.92em}
+.big{font-size:1.2rem;font-weight:700;border:3px solid var(--blue);background:#eff6ff;border-radius:14px;padding:12px 16px}
+svg{width:100%;height:auto;display:block}svg text{font-family:inherit}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:8px 14px}
+details.q{border-left:6px solid var(--violet)}
+summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tb{flex:1;min-width:120px;border:2px solid var(--blue);background:#eff6ff;border-radius:12px;padding:8px 4px;font-weight:700;font-size:.9rem;cursor:pointer;text-align:center;font-family:inherit;color:var(--ink)}
+.tb small{display:block;font-weight:400;color:var(--mut);font-size:.72rem}
+.tb.on{background:var(--blue);color:#fff}.tb.on small{color:#dbeafe}
+.sec{margin:10px 0;border-radius:10px;padding:8px 12px}
+.sec h4{margin:0 0 3px;font-size:.95rem}.sec ul{margin:.2em 0 0 1.1em;padding:0}
+.s-k5{background:#ffedd5}.s-what{background:#f3f4f6}.s-bad{background:#fee2e2}.s-me{background:#dbeafe}.s-oth{background:#fef3c7}.s-test{background:#dcfce7}.s-q{background:#ede9fe}
+.chip{display:inline-block;font-size:.72rem;font-weight:700;color:#fff;border-radius:99px;padding:1px 9px;margin:1px 2px;background:#6b7280}
+table{border-collapse:collapse;width:100%;font-size:.88rem;background:#fff}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:#f3f4f6}
+ol.steps{counter-reset:s;list-style:none;padding:0}
+ol.steps li{counter-increment:s;position:relative;padding:8px 10px 8px 46px;margin:6px 0;background:#fff;border:1px solid var(--line);border-radius:10px}
+ol.steps li::before{content:counter(s);position:absolute;left:10px;top:8px;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;text-align:center;line-height:26px;font-weight:700;font-size:.9rem}
+.if{display:inline-block;background:#fef3c7;border:1px dashed #d97706;border-radius:8px;padding:0 8px;font-size:.85rem;margin-top:3px}
+.ans{display:inline-block;background:#dcfce7;border:1px solid var(--green);border-radius:8px;padding:1px 9px;font-weight:700}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.three div{border-radius:12px;padding:10px;font-size:.92rem;border:2px solid}
+@media(max-width:600px){table{font-size:.74rem}.tb{min-width:95px;font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>ERP, MES, LIMS, SCADA, EMS/BMS: σαν να είσαι 5</h1>
+<p class="cap">Τα συστήματα της αγγελίας, με την ίδια λογική που σου άρεσε στο EMS: τι είναι, τι μπορεί να στραβώσει, τι τσεκάρεις εσύ, ποιος κάνει τι. <a href="index.html">← Πίσω στον οδηγό συνέντευξης</a></p>
+
+<nav>
+<a href="#m1">1 Ο χάρτης</a><a href="#m2">2 Ένα-ένα</a><a href="#m3">3 Σύγκριση</a><a href="#m4">4 Μια παρτίδα</a><a href="#m5">5 Σενάρια</a><a href="#m6">6 Κουίζ</a><a href="#m7">7 Διαφορές σε 1 πρόταση</a><a href="#m8">8 Φύλλο 1'</a>
+</nav>
+
+<div class="box warn"><b class="t">Τι ξέρω και τι όχι</b>
+Η αγγελία αναφέρει αυτά τα συστήματα ως παραδείγματα business applications. <b>Δεν ξέρω</b> ποια ακριβώς έχει η Pharmathen, τι προϊόντα ή εκδόσεις. Όσα γράφω είναι τυπικά για τη βιομηχανία. Στη συνέντευξη πες «τυπικά» και ρώτα τι ισχύει εκεί.</div>
+
+<h2 id="m1">1. Ο χάρτης του εργοστασίου</h2>
+<div class="big">Κάθε σύστημα είναι ένας ρόλος σε μια κουζίνα. Αν θυμάσαι την κουζίνα, θυμάσαι το εργοστάσιο.</div>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>
+Μια μεγάλη κουζίνα που φτιάχνει φάρμακα αντί για φαγητό.<br>
+🏢 <b>ERP</b> = η γραμματέας με το μεγάλο τετράδιο: τι παραγγείλαμε, τι έχει η αποθήκη, ποιο υλικό επιτρέπεται να χρησιμοποιηθεί.<br>
+👨‍🍳 <b>MES</b> = ο σεφ που διαβάζει τη συνταγή βήμα-βήμα και βάζει ✓ σε κάθε βήμα.<br>
+🔬 <b>LIMS</b> = ο γευστής που δοκιμάζει κάθε πιάτο και γράφει αν είναι εντάξει.<br>
+🎛️ <b>SCADA</b> = ο πίνακας με τις οθόνες για όλους τους φούρνους: δείχνει, φωνάζει, θυμάται.<br>
+🧠 <b>PLC</b> = το μικρό εγκεφαλάκι μέσα σε κάθε φούρνο.<br>
+🌡️ <b>BMS</b> = ο θερμοστάτης του κτιρίου, αυτός που ΚΑΝΕΙ δροσιά ή ζέστη.<br>
+📒 <b>EMS</b> = ένα ανεξάρτητο ημερολόγιο που ΓΡΑΦΕΙ τι θερμοκρασία είχε το δωμάτιο και φωνάζει αν χάλασε.</div>
+<div class="panel">
+<svg viewBox="0 0 780 400" role="img" aria-label="Χάρτης συστημάτων">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g font-weight="700" font-size="15" text-anchor="middle">
+<rect x="20" y="15" width="500" height="70" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="270" y="45">🏢 ERP</text><text x="270" y="68" font-size="12" font-weight="400">τι, πόσο, πότε · υλικά, παρτίδες, status · «η γραμματέας»</text>
+<rect x="20" y="110" width="245" height="70" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="142" y="140">👨‍🍳 MES</text><text x="142" y="163" font-size="12" font-weight="400">πώς παράγουμε · «ο σεφ»</text>
+<rect x="275" y="110" width="245" height="70" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/><text x="397" y="140">🔬 LIMS (+CDS)</text><text x="397" y="163" font-size="12" font-weight="400">ποιότητα, εργαστήριο · «ο γευστής»</text>
+<rect x="20" y="205" width="500" height="70" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="270" y="235">🎛️ SCADA</text><text x="270" y="258" font-size="12" font-weight="400">επιβλέπει μηχανήματα · τιμές, alarms, ιστορικό · «ο πίνακας ελέγχου»</text>
+<rect x="20" y="300" width="500" height="70" rx="14" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/><text x="270" y="330">🧠 PLC · αισθητήρες · μηχανήματα</text><text x="270" y="353" font-size="12" font-weight="400">κάνουν τη δουλειά · «το εγκεφαλάκι του φούρνου»</text>
+<rect x="560" y="110" width="200" height="110" rx="14" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="660" y="140">🌡️ BMS</text><text x="660" y="162" font-size="12" font-weight="400">ΕΛΕΓΧΕΙ το κτίριο (HVAC)</text><text x="660" y="182" font-size="12" font-weight="400">«ο θερμοστάτης»</text>
+<rect x="560" y="240" width="200" height="110" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/><text x="660" y="270">📒 EMS</text><text x="660" y="292" font-size="12" font-weight="400">ΚΑΤΑΓΡΑΦΕΙ το περιβάλλον</text><text x="660" y="312" font-size="12" font-weight="400">«το ανεξάρτητο ημερολόγιο»</text></g>
+<g stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#ar)"><path d="M142,85 L142,108"/><path d="M397,85 L397,108"/><path d="M142,180 L142,203"/><path d="M142,275 L142,298"/></g>
+<g font-size="11" fill="#6b7280"><text x="150" y="100">εντολές ↓ αποτελέσματα ↑</text><text x="405" y="100">status ↔</text><text x="150" y="196">δεδομένα ↑</text><text x="150" y="291">εντολές ↓ τιμές ↑</text></g>
+<path d="M660,220 L660,238" stroke="#9ca3af" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+<text x="660" y="385" text-anchor="middle" font-size="12" fill="#6b7280">Δεξιά: το κτίριο και το περιβάλλον (δεν είναι πάνω στη γραμμή παραγωγής)</text>
+</svg>
+<p class="cap" style="margin:6px 0 0">Απλοποιημένος χάρτης (ο τύπος «πυραμίδας» που χρησιμοποιεί η βιομηχανία). Στην πράξη υπάρχουν και άλλα συστήματα (QMS, DMS, ιστορικά, παλιά συστήματα).</p>
+</div>
+<div class="box tip"><b class="t">Γιατί σε νοιάζει ως CSV Analyst</b>
+Κάθε βέλος είναι <b>διεπαφή (interface)</b>. Εκεί συνήθως σπάνε τα πράγματα: τα δεδομένα φεύγουν από ένα σύστημα και πρέπει να φτάσουν ίδια στο επόμενο. Το να ελέγχεις τα βέλη είναι μέρος της δουλειάς σου.</div>
+
+<h2 id="m2">2. Ένα-ένα: πάτα για να ανοίξει</h2>
+<p class="cap">Για κάθε σύστημα: ιστορία για παιδί, τι είναι, τι στραβώνει, τι τσεκάρεις εσύ, ποιοι άλλοι εμπλέκονται, ένα test-παράδειγμα, μια ερώτηση με απάντηση.</p>
+<div class="panel">
+<div class="tabs" id="tabs"></div>
+<div id="detail"></div>
+</div>
+<div class="panel">
+<b>Και δύο ακόμα που αναφέρονται στο ίδιο οικοσύστημα:</b>
+<ul>
+<li><b>CDS (Chromatography Data System)</b>: το λογισμικό που παίρνει τα δεδομένα από όργανα όπως HPLC/GC και τα επεξεργάζεται. Μεγάλο θέμα data integrity: ποιος ξανα-επεξεργάστηκε τα δεδομένα και με ποιες ρυθμίσεις; Κοντά στο LIMS.</li>
+<li><b>Spreadsheets (Excel)</b>: αν χρησιμοποιούνται για GxP υπολογισμούς ή καταγραφές, είναι κι αυτά computerised συστήματα: έλεγχος τύπων, κλείδωμα κελιών, πρόσβαση, εκδόσεις.</li>
+</ul></div>
+
+<h2 id="m3">3. Σύγκριση σε έναν πίνακα</h2>
+<div class="panel" style="overflow-x:auto">
+<table>
+<tr><th>Σύστημα</th><th>Κάνει</th><th>Κύριο ρίσκο</th><th>Πρώτο που τεστάρεις</th><th>Τυπικό GAMP</th></tr>
+<tr><td>🏢 ERP</td><td>υλικά, παρτίδες, status</td><td>master data και δικαιώματα</td><td>μπλοκάρει παρτίδα σε καραντίνα;</td><td>4 (+5 custom)</td></tr>
+<tr><td>👨‍🍳 MES</td><td>εκτέλεση συνταγής, batch record</td><td>λάθος έκδοση, παράκαμψη βημάτων</td><td>σωστή έκδοση και σειρά, hard stops</td><td>4 (+5)</td></tr>
+<tr><td>🔬 LIMS</td><td>δείγματα, αποτελέσματα, CoA</td><td>αλλαγή/εξαφάνιση αποτελεσμάτων</td><td>audit trail και OOS</td><td>4 (+5)</td></tr>
+<tr><td>🎛️ SCADA</td><td>επίβλεψη μηχανημάτων, alarms</td><td>αλλαγή setpoints, χαμένο ιστορικό</td><td>δικαιώματα και historian</td><td>4 (PLC κώδικας συχνά 5)</td></tr>
+<tr><td>🌡️ BMS</td><td>ελέγχει HVAC</td><td>συνθήκες εκτός ορίων</td><td>έλεγχος και alarms</td><td>4</td></tr>
+<tr><td>📒 EMS</td><td>καταγράφει περιβάλλον</td><td>κενά δεδομένων, χαμένα alarms</td><td>καταγραφή, alarm history, audit trail</td><td>4 (αισθητήρες 3)</td></tr>
+</table>
+<p class="cap" style="margin:6px 0 0">Ενδεικτικό. Το πραγματικό βάθος εξαρτάται από το ρίσκο και την τεκμηρίωση του προμηθευτή.</p>
+</div>
+
+<h2 id="m4">4. Η ιστορία μιας παρτίδας (πώς δένουν όλα)</h2>
+<p class="cap">Πάτα την κάθε στάση να δεις το «βέλος» και τι τεστάρεις εκεί.</p>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>Φτιάχνουμε μια τούρτα. Η γραμματέα βρίσκει τα υλικά (ERP). Ο σεφ ακολουθεί τη συνταγή (MES). Ο φούρνος ψήνεται και ο πίνακας τον προσέχει (SCADA). Το δωμάτιο πρέπει να είναι δροσερό (BMS/EMS). Ο γευστής δοκιμάζει (LIMS). Αν είναι εντάξει, η γραμματέα γράφει «μπορεί να πουληθεί» (ERP).</div>
+<ol class="steps" id="batch"></ol>
+
+<h2 id="m5">5. Σενάρια ανάμεσα στα συστήματα</h2>
+<details class="q"><summary>1. Μετά από upgrade του ERP, μια παρτίδα σε καραντίνα μπορεί να χρησιμοποιηθεί.</summary>
+<ol><li>Σοβαρό: ενδεχόμενη επίπτωση σε προϊόν. Ενημερώνω QA αμέσως.</li><li>Σταματά η χρήση της λειτουργίας ή ισχύει χειροκίνητος έλεγχος μέχρι να λυθεί.</li><li>Αιτία: ο upgrade άλλαξε ρύθμιση; Regression test δεν το κάλυψε;</li><li>Deviation, change control για τη διόρθωση, regression tests στις κρίσιμες ροές (status παρτίδας).</li><li>Impact assessment: έγινε χρήση; Ποιες παρτίδες;</li></ol>
+<p><b>Μάθημα:</b> οι αλλαγές στο ERP χρειάζονται regression στις GxP-κρίσιμες ροές, όχι μόνο στις ροές που άλλαξαν.</p></details>
+
+<details class="q"><summary>2. Στο MES βρέθηκε σε χρήση παλιά έκδοση συνταγής.</summary>
+<ol><li>Ενημερώνω QA, σταματά η χρήση της παλιάς έκδοσης.</li><li>Έλεγχος: πώς έγινε; Η νέα έκδοση δεν έγινε effective; Δύο εκδόσεις ενεργές;</li><li>Impact: ποιες παρτίδες παράχθηκαν με την παλιά;</li><li>CAPA: τεχνικός έλεγχος που αποτρέπει δύο ενεργές εκδόσεις.</li></ol></details>
+
+<details class="q"><summary>3. Ο αναλυτής αντέγραψε χειροκίνητα τα αποτελέσματα από το όργανο στο LIMS.</summary>
+<p>Ρίσκο: τα πρωτογενή δεδομένα (raw data) είναι στο όργανο/CDS, όχι στο LIMS. Η χειροκίνητη μεταφορά μπορεί να έχει λάθη ή «διορθώσεις». Λύση: αυτόματη διεπαφή οργάνου→LIMS με επαλήθευση, ή τουλάχιστον ανεξάρτητος δεύτερος έλεγχος. Αν έγινε αργότερα, παραβιάζεται και το Contemporaneous του ALCOA+.</p></details>
+
+<details class="q"><summary>4. Ο υπολογιστής του SCADA τρέχει παλιά Windows χωρίς patches και δεν μπορεί να αναβαθμιστεί.</summary>
+<p>Συνηθισμένο στο OT. Δεν το «κλείνεις» απλά. Αξιολογώ ρίσκο και ζητώ <b>αντισταθμιστικά μέτρα (compensating controls)</b>: απομόνωση δικτύου, περιορισμένη πρόσβαση, αποκλεισμός USB, backup. Τεκμηριώνω το ρίσκο και πλάνο αντικατάστασης. Το κάνω με IT/OT και QA.</p></details>
+
+<details class="q"><summary>5. Alarm από το EMS την ώρα παραγωγής σε χώρο παρτίδας.</summary>
+<p>Ο CSV Analyst δεν αποφασίζει για το προϊόν. Φροντίζω ότι το alarm καταγράφηκε, ότι το ιστορικό είναι ακέραιο, και ότι η πληροφορία φτάνει σε QA για deviation και impact assessment. Γι' αυτό το EMS πρέπει να είναι ανεξάρτητη, αξιόπιστη πηγή.</p></details>
+
+<details class="q"><summary>6. Το MES και το SCADA δείχνουν διαφορετική ώρα για το ίδιο γεγονός.</summary>
+<p>Πρόβλημα συνέπειας ώρας (Consistent στο ALCOA+). Συγχρονισμός (NTP) σε όλα τα συστήματα, έλεγχος στο IQ και στο periodic review, και εκτίμηση αν επηρεάστηκαν παρτίδες.</p></details>
+
+<details class="q"><summary>7. Η διεπαφή ERP→LIMS είναι custom και δεν έχει δοκιμαστεί.</summary>
+<p>Cat. 5 κομμάτι, χρειάζεται verification: ίδιες τιμές, πλήρη δεδομένα, τι γίνεται όταν πέσει η σύνδεση (ουρά, επανάληψη, διπλές εγγραφές). Μέχρι τότε, περιορισμένη χρήση ή χειροκίνητος έλεγχος που τεκμηριώνεται.</p></details>
+
+<h2 id="m6">6. Κουίζ: ποιο σύστημα;</h2>
+<p class="cap">Πες την απάντηση φωναχτά και μετά άνοιξε.</p>
+<details class="q"><summary>«Ζυγίζω υλικά με οδηγίες στην οθόνη και υπογράφω ηλεκτρονικά.»</summary><span class="ans">MES</span></details>
+<details class="q"><summary>«Αποτέλεσμα HPLC για μια παρτίδα και πιστοποιητικό ανάλυσης (CoA).»</summary><span class="ans">LIMS / CDS</span></details>
+<details class="q"><summary>«Πόσα κιλά υλικού έχουμε και αν επιτρέπεται η χρήση τους.»</summary><span class="ans">ERP</span></details>
+<details class="q"><summary>«Ταχύτητα, θερμοκρασία και πίεση ενός μηχανήματος με alarm και ιστορικό.»</summary><span class="ans">SCADA (με PLC από κάτω)</span></details>
+<details class="q"><summary>«Ρυθμίζει τον κλιματισμό ώστε το δωμάτιο να είναι στους 22°C.»</summary><span class="ans">BMS (ελέγχει)</span></details>
+<details class="q"><summary>«Καταγράφει ανεξάρτητα τη θερμοκρασία ενός χώρου και κρατά ιστορικό alarms.»</summary><span class="ans">EMS (καταγράφει)</span></details>
+<details class="q"><summary>«Ηλεκτρονικό batch record που το εγκρίνεται "κατ' εξαίρεση".»</summary><span class="ans">MES (review by exception)</span></details>
+<details class="q"><summary>«Master data: λίστα υλικών και προδιαγραφές στο οικονομικό σύστημα.»</summary><span class="ans">ERP</span></details>
+
+<h2 id="m7">7. Διαφορές σε μία πρόταση (για τη συνέντευξη)</h2>
+<div class="three">
+<div style="background:#dbeafe;border-color:#2563eb"><b>ERP vs MES</b><br>Το ERP λέει <i>τι</i> και <i>πόσο</i> θα παραχθεί. Το MES λέει <i>πώς</i> και καταγράφει <i>τι έγινε</i>.</div>
+<div style="background:#ede9fe;border-color:#7c3aed"><b>SCADA vs MES</b><br>Το SCADA επιβλέπει τα μηχανήματα σε πραγματικό χρόνο. Το MES διαχειρίζεται τη συνταγή και τον φάκελο παρτίδας.</div>
+<div style="background:#fef9c3;border-color:#ca8a04"><b>LIMS vs CDS</b><br>Το CDS παίρνει και επεξεργάζεται τα δεδομένα του οργάνου. Το LIMS διαχειρίζεται τα δείγματα, τα αποτελέσματα και την έγκριση.</div>
+<div style="background:#ffedd5;border-color:#ea580c"><b>BMS vs EMS</b><br>Το BMS <i>ελέγχει</i> το κτίριο. Το EMS <i>καταγράφει</i> ανεξάρτητα τις συνθήκες και ειδοποιεί.</div>
+<div style="background:#f3f4f6;border-color:#6b7280"><b>PLC vs SCADA</b><br>Το PLC εκτελεί τη λογική στο μηχάνημα. Το SCADA τα επιβλέπει και τα εμφανίζει.</div>
+<div style="background:#dcfce7;border-color:#16a34a"><b>IT vs OT</b><br>IT: γραφεία και δεδομένα. OT: μηχανήματα και διεργασίες. Στο OT η διαθεσιμότητα και η ασφάλεια έχουν άλλους κανόνες.</div>
+</div>
+<div class="box warn"><b class="t">Προσοχή με το «EMS»</b>
+Σε πολλές εταιρείες, «environmental monitoring» σημαίνει και το μικροβιολογικό πρόγραμμα καθαρών χώρων (σωματίδια, μικροοργανισμοί). Στο Warning Letter, οι αισθητήρες πίεσης, θερμοκρασίας και υγρασίας υποδεικνύουν το <b>facility monitoring</b>. Αν σε μπερδέψουν, ρώτα: «Εννοείτε το σύστημα παρακολούθησης θερμοκρασίας/υγρασίας/πίεσης;»</div>
+
+<h2 id="m8">8. Φύλλο 1 λεπτού</h2>
+<div class="panel">
+<ul>
+<li>🏢 <b>ERP</b>: υλικά και status παρτίδων · ρίσκο: master data, δικαιώματα · δεν επικυρώνω όλο, μόνο GxP διεργασίες.</li>
+<li>👨‍🍳 <b>MES</b>: εκτελεί τη συνταγή · ρίσκο: λάθος έκδοση, παράκαμψη · e-signatures + audit trail.</li>
+<li>🔬 <b>LIMS/CDS</b>: αποτελέσματα · ρίσκο: αλλαγή/εξαφάνιση, testing into compliance · audit trail + raw data.</li>
+<li>🎛️ <b>SCADA/PLC</b>: επιβλέπει μηχανήματα · ρίσκο: setpoints, ιστορικό, legacy · δικαιώματα + historian + backup.</li>
+<li>🌡️ <b>BMS</b> ελέγχει · 📒 <b>EMS</b> καταγράφει ανεξάρτητα.</li>
+<li>➡️ <b>Διεπαφές</b>: ίδια δεδομένα, πλήρη, με σωστή ώρα, και τι γίνεται όταν πέσει η σύνδεση.</li>
+<li>🧭 Πάντα: GAMP κατηγορία → ρίσκο → προμηθευτής → URS → tests → report → συντήρηση.</li>
+</ul></div>
+<div class="box tip"><b class="t">Αν δεν θυμάσαι τίποτα άλλο</b>
+Μάθε τα 6 ονόματα με τα προσωνύμια: γραμματέας, σεφ, γευστής, πίνακας ελέγχου, θερμοστάτης, ημερολόγιο. Από εκεί βγαίνουν τα υπόλοιπα.</div>
+
+</div>
+<script>
+const S=[
+{id:'erp',ic:'🏢',t:'ERP',s:'η γραμματέας',
+k5:'Η γραμματέα με το μεγάλο τετράδιο: τι παραγγείλαμε, τι έχει η αποθήκη, και ποιο υλικό επιτρέπεται να χρησιμοποιηθεί. Αν ένα υλικό έχει κόκκινο αυτοκόλλητο (καραντίνα), δεν το δίνει στον σεφ.',
+what:'Διαχειρίζεται αγορές, αποθήκη, παρτίδες, κόστος, οικονομικά. Στη φαρμακευτική έχει σημασία η κατάσταση υλικού/παρτίδας (καραντίνα, εγκεκριμένο, απορριφθέν) και η ιχνηλασιμότητα (από πού ήρθε κάθε υλικό και πού πήγε). Δεν είναι ολόκληρο GxP: το βρίσκεις με risk assessment.',
+bad:['Αλλαγή master data (π.χ. λίστα υλικών/συνταγή) χωρίς έλεγχο','Παρτίδα σε καραντίνα που χρησιμοποιείται','Ένας χρήστης μπορεί να δημιουργεί και να εγκρίνει (έλλειψη segregation of duties)','Custom reports ή interfaces που δεν δοκιμάστηκαν','Upgrade που αλλάζει συμπεριφορά χωρίς regression test'],
+me:['Ορίζω ποιες διεργασίες είναι GxP (scope με risk assessment) και δεν κάνω validation παντού','Η ροή status καραντίνα → εγκεκριμένο είναι αναγκαστική (το σύστημα μπλοκάρει)','Πίνακας ρόλων και έλεγχος συγκρούσεων καθηκόντων','Master data: ποιος αλλάζει, με ποια έγκριση, με audit trail','Custom (cat. 5) reports και interfaces: verification','Ιχνηλασιμότητα: από το προϊόν πίσω στις πρώτες ύλες και αντίστροφα','Μετά από upgrade: regression στις κρίσιμες ροές'],
+oth:[['IT / SAP team','υλοποίηση και ρυθμίσεις'],['Key users (Supply chain, Finance)','ιδιοκτησία διεργασιών, master data'],['QA','έγκριση, status παρτίδων'],['Vendor / integrator','πακέτο και custom']],
+gamp:'Cat. 4 (ρυθμιζόμενο). Custom reports/interfaces: cat. 5.',
+test:'Προσπαθώ να χρησιμοποιήσω παρτίδα σε καραντίνα σε εντολή παραγωγής: το σύστημα πρέπει να το αποτρέπει. Δοκιμάζω ρόλο που δημιουργεί και εγκρίνει την ίδια παραγγελία: πρέπει να μπλοκάρεται.',
+q:'«Πώς κάνεις validation σε ERP; Είναι τεράστιο.»',
+a:'«Δεν επικυρώνω ολόκληρο το ERP. Κάνω risk assessment και ορίζω ποιες διεργασίες είναι GxP-κρίσιμες, όπως το status των παρτίδων, το master data και η ιχνηλασιμότητα. Εκεί εστιάζω τα tests, και στηρίζομαι στον προμηθευτή για το βασικό πακέτο.»'},
+{id:'mes',ic:'👨‍🍳',t:'MES',s:'ο σεφ',
+k5:'Ο σεφ που διαβάζει τη συνταγή από οθόνη και σημειώνει ✓ σε κάθε βήμα. Δεν σε αφήνει να περάσεις στο επόμενο αν δεν έκανες το προηγούμενο. Αν βάλεις 5 κουταλιές ενώ λέει 3, φωνάζει.',
+what:'Manufacturing Execution System. Εκτελεί την παραγωγή: ηλεκτρονικό batch record (EBR), οδηγίες στον χειριστή, ζύγιση και διανομή υλικών με barcode, καταγραφή παραμέτρων, deviations, review by exception (ελέγχεται μόνο ό,τι ξέφυγε). Παίρνει εντολές από το ERP και δεδομένα από τον εξοπλισμό.',
+bad:['Σε χρήση λάθος έκδοση συνταγής (master batch record)','Παράκαμψη βημάτων ή σειράς','Χειροκίνητη εισαγωγή τιμών αντί για αυτόματη από τη ζυγαριά','Ανεπαρκής έλεγχος ηλεκτρονικών υπογραφών','Τι γίνεται όταν πέσει το σύστημα (offline)','Deviation που δεν καταγράφεται'],
+me:['Έκδοση συνταγής: έγκριση, ενεργοποίηση, μία ενεργή έκδοση (change control)','Σειρά βημάτων και όρια: hard stops που δεν παρακάμπτονται','Ζυγαριά→MES: η τιμή στο σύστημα = η τιμή του οργάνου','Ηλεκτρονικές υπογραφές (Part 11): μοναδικός χρήστης, νόημα υπογραφής, δέσιμο με την εγγραφή','Audit trail','Review by exception: οι κανόνες δοκιμάζονται','Διαδικασία offline και επαναφορά'],
+oth:[['Παραγωγή','ιδιοκτήτης διεργασίας'],['MES team / IT','διαχείριση συστήματος'],['Automation / Engineering','διεπαφές εξοπλισμού'],['QA','έγκριση batch records και συνταγών']],
+gamp:'Cat. 4. Custom scripts/interfaces: cat. 5.',
+test:'Βάζω τιμή εκτός ορίων σε βήμα: το σύστημα μπλοκάρει ή απαιτεί deviation. Προσπαθώ να παρακάμψω βήμα: αδύνατο. Αλλάζω συνταγή: ο audit trail δείχνει ποιος, πότε, γιατί.',
+q:'«Τι θα έλεγχες σε ένα MES;»',
+a:'«Ότι εφαρμόζει τη συνταγή όπως εγκρίθηκε: σωστή έκδοση, σωστή σειρά, όρια που μπλοκάρουν, σωστή λήψη δεδομένων από τον εξοπλισμό, ηλεκτρονικές υπογραφές και audit trail. Και τι γίνεται όταν πέσει το σύστημα.»'},
+{id:'lims',ic:'🔬',t:'LIMS',s:'ο γευστής',
+k5:'Ο γευστής του εργαστηρίου: κάθε δείγμα παίρνει αριθμό, δοκιμάζεται, και το αποτέλεσμα γράφεται στο βιβλίο. Αν είναι εκτός ορίων, χτυπά καμπανάκι. Και το βιβλίο δεν σβήνεται.',
+what:'Laboratory Information Management System. Διαχειρίζεται δείγματα, εντολές δοκιμών, αποτελέσματα, προδιαγραφές (specs), πιστοποιητικά ανάλυσης (CoA), και συνδέεται με όργανα και CDS. Τα αποτελέσματα του QC είναι η βάση για την έγκριση μιας παρτίδας, άρα αυστηρό data integrity. Τα εργαστηριακά συστήματα είναι από τα πιο συχνά σημεία ευρημάτων στις επιθεωρήσεις (audit trail, backup, πρόσβαση).',
+bad:['Αλλαγή ή εξαφάνιση αποτελεσμάτων χωρίς ίχνος','Επανάληψη δοκιμής μέχρι να περάσει (testing into compliance)','Λάθος έκδοση προδιαγραφής','Λάθος τύπος υπολογισμού','Ο αναλυτής έχει δικαιώματα administrator','Αποτελέσματα που γράφονται αργότερα (όχι contemporaneous)','Χειροκίνητη αντιγραφή από το όργανο'],
+me:['Audit trail στα αποτελέσματα, δεν απενεργοποιείται','Ρόλοι: αναλυτής, reviewer, admin ξεχωριστά','Υπολογισμοί: δοκιμή με γνωστά δεδομένα','Προδιαγραφές με έλεγχο εκδόσεων και αυτόματη σήμανση OOS (out of specification)','Ροή έγκρισης και ηλεκτρονική υπογραφή','Διεπαφή οργάνου/CDS→LIMS: αυτόματη, επαληθευμένη','Backup και δοκιμή restore, ώρα συγχρονισμένη'],
+oth:[['QC Lab','ιδιοκτήτης διεργασίας'],['LIMS admin / IT','διαχείριση, backup'],['QA','έρευνα OOS, έγκριση'],['Vendor','πακέτο και επιτόπια ρύθμιση']],
+gamp:'Cat. 4. Custom υπολογισμοί/reports/interfaces: cat. 5.',
+test:'Εισάγω αποτέλεσμα εκτός ορίων: σημαίνεται ως OOS και δεν περνά σιωπηλά. Αλλάζω αποτέλεσμα: ο audit trail δείχνει παλιά/νέα τιμή, χρήστη, ώρα, λόγο.',
+q:'«Τι σημαίνει data integrity σε εργαστήριο;»',
+a:'«Ότι το αποτέλεσμα που βλέπει ο QA είναι ακριβώς αυτό που παρήγαγε το όργανο, με ίχνος για κάθε αλλαγή και χωρίς δυνατότητα να «διορθωθεί» αθόρυβα. Το ALCOA+ σε πράξη: ποιος, πότε, αρχικό, πλήρες.»'},
+{id:'scada',ic:'🎛️',t:'SCADA',s:'ο πίνακας ελέγχου',
+k5:'Ο πίνακας με τις οθόνες για όλους τους φούρνους: δείχνει θερμοκρασίες, φωνάζει αν κάτι ξεφύγει, και θυμάται τι έγινε χθες. Κάθε φούρνος έχει δικό του εγκεφαλάκι (PLC) που κάνει τη δουλειά. Το SCADA τα προσέχει όλα μαζί.',
+what:'Supervisory Control And Data Acquisition. Επιβλέπει και ελέγχει διεργασίες μέσω PLC, εμφανίζει τιμές, alarms, τάσεις (trends) και κρατά ιστορικό (historian). Ανήκει στον κόσμο του OT (operational technology), που έχει άλλους κανόνες από το IT: δεν μπορείς εύκολα να τα κλείσεις και να τα αναβαθμίσεις.',
+bad:['Αλλαγή setpoint χωρίς έγκριση','Το ιστορικό δεν αποθηκεύεται ή χάνεται','Παλιά λειτουργικά συστήματα χωρίς patches (legacy)','Κοινοί λογαριασμοί στον πίνακα','Διαφορετική ώρα ανάμεσα σε PLC και SCADA','Δεν υπάρχει backup του προγράμματος του PLC','Μη εξουσιοδοτημένη πρόσβαση (USB, δίκτυο)'],
+me:['Λίστα I/O: κάθε tag αντιστοιχεί στον σωστό αισθητήρα/όργανο','Alarms: όρια, ειδοποίηση, ιστορικό που δεν σβήνεται','Historian: συνεχής αποθήκευση και δυνατότητα ανάκτησης','Ρόλοι και κλείδωμα setpoints','Audit trail για αλλαγές παραμέτρων','Backup και restore του project SCADA και του προγράμματος PLC','Έκδοση PLC program υπό change control','Ώρα συγχρονισμένη'],
+oth:[['Automation / Engineering / OT','κύριος ιδιοκτήτης'],['IT','δίκτυο, ασφάλεια'],['Παραγωγή','χρήστες'],['QA','έγκριση'],['Integrator / Vendor','υλοποίηση']],
+gamp:'Cat. 4 για το SCADA. Το πρόγραμμα PLC συχνά cat. 5 (ή 4 αν είναι ρύθμιση έτοιμων blocks). Field devices/firmware: cat. 3.',
+test:'Αλλάζω setpoint με ρόλο χωρίς δικαίωμα: αποτυγχάνει. Κόβω την επικοινωνία PLC–SCADA: εμφανίζεται alarm, και βλέπω τι γίνεται με τα δεδομένα στο διάστημα του κενού.',
+q:'«Ποια η διαφορά SCADA και MES;»',
+a:'«Το SCADA επιβλέπει και ελέγχει τα μηχανήματα σε πραγματικό χρόνο: τιμές, alarms, ιστορικό. Το MES διαχειρίζεται το τι και το πώς παράγουμε: συνταγή, βήματα, φάκελο παρτίδας. Το SCADA τροφοδοτεί το MES με δεδομένα.»'},
+{id:'ems',ic:'🌡️',t:'BMS και EMS',s:'θερμοστάτης + ημερολόγιο',
+k5:'Ο θερμοστάτης του κτιρίου (BMS) ΚΑΝΕΙ δροσιά ή ζέστη. Το ημερολόγιο (EMS) ΓΡΑΦΕΙ τι θερμοκρασία είχε το δωμάτιο και φωνάζει αν χάλασε. Τα θέλουμε ξεχωριστά, ώστε να μην εμπιστευόμαστε μόνο αυτόν που ελέγχει.',
+what:'BMS (Building Management System): ελέγχει HVAC και άλλες υπηρεσίες κτιρίου. EMS (εδώ: facility monitoring): ανεξάρτητη παρακολούθηση θερμοκρασίας, υγρασίας, διαφορικής πίεσης, με καταγραφή, alarms και αναφορές. Στις Σάπες, η FDA ζήτησε validated σύστημα που αποθηκεύει δεδομένα και ιστορικό alarms. Όλη η ανάλυση είναι στη σελίδα «GAMP και EMS».',
+bad:['EMS και BMS δεν είναι ανεξάρτητα (ένα σφάλμα επηρεάζει και τα δύο)','Κενά δεδομένων όταν πέσει το δίκτυο','Alarm που δεν φτάνει ή δεν καταγράφεται','Αισθητήρες εκτός βαθμονόμησης','Αλλαγή ορίων χωρίς έγκριση'],
+me:['Καταγραφή συνεχής και ιστορικό alarms που δεν σβήνεται','Alarm: όρια, ειδοποίηση, acknowledge, escalation','Calibration ιχνηλάσιμη, με master list','Audit trail και δικαιώματα','Backup, restore, ώρα','Reports: ταιριάζουν με τα raw data'],
+oth:[['Engineering / Facilities','αισθητήρες, calibration'],['IT','δίκτυο, server'],['QA','όρια, deviations'],['System owner','απαιτήσεις'],['Vendor','λογισμικό']],
+gamp:'Cat. 4 (λογισμικό). Αισθητήρες/firmware: cat. 3. Custom reports/interfaces: cat. 5.',
+test:'Προκαλώ τιμή εκτός ορίων και ελέγχω alarm, ειδοποίηση, acknowledge και ιστορικό. Κόβω το δίκτυο και ελέγχω backfill.',
+q:'«Διαφορά BMS και EMS;»',
+a:'«Το BMS ελέγχει τις συνθήκες του κτιρίου. Το EMS τις καταγράφει ανεξάρτητα και ειδοποιεί όταν βγουν εκτός ορίων. Για το GxP αρχείο θέλουμε το ανεξάρτητο EMS, γιατί δεν εμπιστευόμαστε μόνο το σύστημα που ελέγχει.»'}
+];
+const li=a=>a.map(x=>'<li>'+x+'</li>').join('');
+function show(o,b){
+ document.querySelectorAll('.tb').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ document.getElementById('detail').innerHTML=
+ '<h3 style="margin-top:14px">'+o.ic+' '+o.t+' <span class="cap">— '+o.s+'</span></h3>'+
+ '<div class="sec s-k5"><h4>Σαν να είσαι 5</h4>'+o.k5+'</div>'+
+ '<div class="sec s-what"><h4>Τι είναι</h4>'+o.what+'</div>'+
+ '<div class="sec s-bad"><h4>Τι μπορεί να στραβώσει</h4><ul>'+li(o.bad)+'</ul></div>'+
+ '<div class="sec s-me"><h4>Τι τσεκάρεις ΕΣΥ</h4><ul>'+li(o.me)+'</ul></div>'+
+ '<div class="sec s-oth"><h4>Ποιοι άλλοι εμπλέκονται (τυπικά)</h4>'+o.oth.map(p=>'<span class="chip">'+p[0]+'</span> '+p[1]).join('<br>')+'<p style="margin:6px 0 0"><b>GAMP:</b> '+o.gamp+'</p></div>'+
+ '<div class="sec s-test"><h4>Παράδειγμα test</h4>'+o.test+'</div>'+
+ '<div class="sec s-q"><h4>Ερώτηση που μπορεί να έρθει</h4><b>'+o.q+'</b><br><i>'+o.a+'</i></div>';
+}
+const T=document.getElementById('tabs');
+S.forEach((o,i)=>{const b=document.createElement('button');b.className='tb';b.innerHTML=o.ic+'<br>'+o.t+'<small>'+o.s+'</small>';b.onclick=()=>show(o,b);T.appendChild(b);});
+show(S[1],T.children[1]);
+
+const B=[
+['ERP δημιουργεί εντολή παραγωγής και δεσμεύει υλικά','ERP → MES','Η εντολή φτάνει σωστά: κωδικός προϊόντος, ποσότητα, σωστή έκδοση συνταγής.'],
+['Το MES καθοδηγεί τη ζύγιση των υλικών','Ζυγαριά → MES','Η τιμή περνά αυτόματα, χωρίς χειροκίνητη επέμβαση, και σταματά αν είναι εκτός ορίων.'],
+['Το μηχάνημα τρέχει, το SCADA το επιβλέπει','PLC → SCADA → MES','Οι κρίσιμες παράμετροι καταγράφονται ολόκληρες, με σωστή ώρα, και τα alarms μένουν στο ιστορικό.'],
+['Το EMS καταγράφει το περιβάλλον του χώρου','Αισθητήρες → EMS','Δεν υπάρχουν κενά, και τυχόν alarm φαίνεται στην αξιολόγηση της παρτίδας.'],
+['Παίρνεται δείγμα και ταυτοποιείται στο LIMS','MES / ERP → LIMS','Το δείγμα αντιστοιχεί στη σωστή παρτίδα και δοκιμή.'],
+['Το αποτέλεσμα του QC εγκρίνεται και η παρτίδα αλλάζει status','LIMS → ERP','Η παρτίδα βγαίνει από την καραντίνα μόνο με εγκεκριμένο αποτέλεσμα.']
+];
+const E=document.getElementById('batch');
+B.forEach(x=>{const l=document.createElement('li');l.innerHTML='<b>'+x[0]+'</b><br><span class="if">διεπαφή: '+x[1]+'</span><br><span class="cap">Τεστάρεις: '+x[2]+'</span>';E.appendChild(l);});
+</script>
+</body>
+</html>
