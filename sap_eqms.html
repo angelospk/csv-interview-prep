@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>SAP και EQMS: σαν να είσαι 5</title>
+<style>
+:root{--bg:#fbf8f1;--ink:#1f2937;--mut:#6b7280;--blue:#2563eb;--green:#16a34a;--orange:#ea580c;--red:#dc2626;--violet:#7c3aed;--line:#e5dfd0}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.62 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:920px;margin:0 auto;padding:16px 14px 100px}
+h1{font-size:1.9rem;margin:.2em 0;line-height:1.2}
+h2{font-size:1.45rem;margin:2.1em 0 .3em;padding-top:.5em;border-top:4px solid var(--ink)}
+h3{font-size:1.1rem;margin:1.2em 0 .3em}
+.cap{color:var(--mut);margin:0 0 8px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);display:flex;gap:6px;flex-wrap:wrap}
+nav a{font-size:.78rem;text-decoration:none;background:#fff;border:1px solid var(--line);color:var(--ink);padding:3px 10px;border-radius:99px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 15px;margin:10px 0}
+.box{border-left:6px solid;border-radius:10px;padding:10px 14px;margin:12px 0}
+.k5{border-color:var(--orange);background:#fff7ed}.say{border-color:var(--blue);background:#eff6ff}.tip{border-color:var(--green);background:#f0fdf4}.warn{border-color:var(--red);background:#fef2f2}
+.box b.t{display:block}
+.en{background:#eef2ff;color:#3730a3;border-radius:4px;padding:0 5px;font-size:.92em}
+.big{font-size:1.2rem;font-weight:700;border:3px solid var(--blue);background:#eff6ff;border-radius:14px;padding:12px 16px}
+svg{width:100%;height:auto;display:block}svg text{font-family:inherit}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:8px 14px}
+details.q{border-left:6px solid var(--violet)}
+summary{cursor:pointer;font-weight:600}details[open] summary{margin-bottom:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tb{flex:1;min-width:120px;border:2px solid var(--blue);background:#eff6ff;border-radius:12px;padding:8px 4px;font-weight:700;font-size:.9rem;cursor:pointer;text-align:center;font-family:inherit;color:var(--ink)}
+.tb small{display:block;font-weight:400;color:var(--mut);font-size:.72rem}
+.tb.on{background:var(--blue);color:#fff}.tb.on small{color:#dbeafe}
+.sec{margin:10px 0;border-radius:10px;padding:8px 12px}
+.sec h4{margin:0 0 3px;font-size:.95rem}.sec ul{margin:.2em 0 0 1.1em;padding:0}
+.s-k5{background:#ffedd5}.s-what{background:#f3f4f6}.s-bad{background:#fee2e2}.s-me{background:#dbeafe}.s-oth{background:#fef3c7}.s-test{background:#dcfce7}.s-q{background:#ede9fe}
+.chip{display:inline-block;font-size:.72rem;font-weight:700;color:#fff;border-radius:99px;padding:1px 9px;margin:1px 2px;background:#6b7280}
+table{border-collapse:collapse;width:100%;font-size:.9rem;background:#fff}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:#f3f4f6}
+.ans{display:inline-block;background:#dcfce7;border:1px solid var(--green);border-radius:8px;padding:1px 9px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.card{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 12px}
+@media(max-width:600px){table{font-size:.78rem}.tb{min-width:95px;font-size:.8rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>SAP και EQMS: σαν να είσαι 5</h1>
+<p class="cap">Τα δύο συστήματα που ανέφεραν στη συνέντευξη. <a href="index.html">← οδηγός</a> · <a href="systems.html">← τα 5 συστήματα</a></p>
+<nav><a href="#a">1 Η εικόνα</a><a href="#b">2 SAP</a><a href="#c">3 EQMS</a><a href="#d">4 Πώς δένουν</a><a href="#e">5 Σενάρια</a><a href="#f">6 Κουίζ</a><a href="#g">7 Ερωτήσεις</a><a href="#h">8 Φύλλο 1'</a></nav>
+
+<div class="box warn"><b class="t">Τι ξέρω και τι όχι</b>
+Από τη συνέντευξη ξέρουμε μόνο ότι η εταιρεία χρησιμοποιεί <b>SAP</b> και ένα <b>EQMS</b> (ηλεκτρονικό σύστημα εγγράφων και διαδικασιών) και ότι αναφέρθηκε και σύστημα τύπου cloud. <b>Δεν ξέρω</b> ποια modules του SAP, ποια έκδοση, ούτε ποιο προϊόν είναι το EQMS. Όσα γράφω είναι τυπικά. Ρώτα στον επόμενο γύρο.</div>
+
+<h2 id="a">1. Η εικόνα σε ένα λεπτό</h2>
+<div class="big">Το SAP θυμάται τα πράγματα και τα λεφτά. Το EQMS θυμάται τους κανόνες και ποιος τους ενέκρινε.</div>
+<div class="box k5"><b class="t">Σαν να είσαι 5</b>
+Φαντάσου ένα σχολείο.<br>
+🏢 <b>SAP</b> = η γραμματεία και η αποθήκη: ξέρει πόσα μολύβια έχουμε, πού είναι, ποια κουτιά είναι κλειδωμένα, ποιος τα παρήγγειλε και πόσο κόστισαν.<br>
+📘 <b>EQMS</b> = το βιβλίο των κανόνων του σχολείου και το τετράδιο με τις υπογραφές: ποιος έγραψε κάθε κανόνα, ποιος τον είδε, ποιος τον ενέκρινε, ποιος τον διάβασε, και τι κάνουμε όταν κάποιος τον παραβιάζει.</div>
+<div class="panel">
+<svg viewBox="0 0 780 260" role="img" aria-label="SAP και EQMS">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g font-weight="700" font-size="15" text-anchor="middle">
+<rect x="10" y="20" width="340" height="170" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="180" y="50">🏢 SAP</text>
+<text x="180" y="78" font-size="13" font-weight="400">υλικά · αποθήκη · παρτίδες</text><text x="180" y="100" font-size="13" font-weight="400">αγορές · παραγωγή · ποιότητα</text><text x="180" y="122" font-size="13" font-weight="400">οικονομικά · status παρτίδας</text>
+<text x="180" y="160" font-size="14">«Τι έχουμε και τι επιτρέπεται;»</text>
+<rect x="430" y="20" width="340" height="170" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="600" y="50">📘 EQMS</text>
+<text x="600" y="78" font-size="13" font-weight="400">SOPs · πρωτόκολλα · reports</text><text x="600" y="100" font-size="13" font-weight="400">change control · deviations · CAPA</text><text x="600" y="122" font-size="13" font-weight="400">εκπαίδευση · υπογραφές</text>
+<text x="600" y="160" font-size="14">«Τι κανόνες ισχύουν και ποιος το ενέκρινε;»</text></g>
+<g stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#ar)"><path d="M352,105 L428,105"/></g>
+<text x="390" y="95" text-anchor="middle" font-size="11" fill="#6b7280">αλλαγή</text>
+<rect x="150" y="212" width="480" height="36" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="390" y="236" text-anchor="middle" font-size="14" font-weight="700">Εσύ: φροντίζεις ότι και τα δύο είναι αξιόπιστα και ελεγχόμενα</text>
+</svg></div>
+
+<h2 id="b">2. SAP και EQMS ένα-ένα</h2>
+<p class="cap">Πάτα για να ανοίξει. Κάθε σύστημα έχει: ιστορία για παιδί, τι είναι, τι στραβώνει, τι τσεκάρεις εσύ, test, ερώτηση.</p>
+<div class="panel"><div class="tabs" id="tabs"></div><div id="detail"></div></div>
+
+<h3>SAP: η ζωή μιας παρτίδας (η εικόνα που χρειάζεσαι)</h3>
+<div class="panel">
+<svg viewBox="0 0 780 190" role="img" aria-label="Status παρτίδας">
+<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g font-weight="700" font-size="14" text-anchor="middle">
+<rect x="10" y="30" width="160" height="80" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/><text x="90" y="62">Παραλαβή</text><text x="90" y="85" font-size="12" font-weight="400">ήρθε το υλικό</text>
+<rect x="200" y="30" width="160" height="80" rx="14" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/><text x="280" y="62">Καραντίνα</text><text x="280" y="85" font-size="12" font-weight="400">δεν επιτρέπεται χρήση</text>
+<rect x="390" y="30" width="160" height="80" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="470" y="62">Έλεγχος ποιότητας</text><text x="470" y="85" font-size="12" font-weight="400">δείγμα και αποτέλεσμα</text>
+<rect x="580" y="10" width="190" height="55" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="675" y="35">Εγκρίνεται → διαθέσιμο</text><text x="675" y="54" font-size="11" font-weight="400">μπορεί να χρησιμοποιηθεί</text>
+<rect x="580" y="80" width="190" height="55" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/><text x="675" y="105">Απορρίπτεται → μπλοκ</text><text x="675" y="124" font-size="11" font-weight="400">δεν χρησιμοποιείται ποτέ</text></g>
+<g stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#ar2)"><path d="M170,70 L198,70"/><path d="M360,70 L388,70"/><path d="M550,60 L578,40"/><path d="M550,80 L578,100"/></g>
+<text x="390" y="170" text-anchor="middle" font-size="14" fill="#374151">Το κλειδί: μόνο ένα εγκεκριμένο αποτέλεσμα ποιότητας αλλάζει το status. Κανείς δεν το αλλάζει με το χέρι χωρίς ίχνος.</text>
+</svg></div>
+
+<h3>SAP: ο δρόμος μιας αλλαγής (transports)</h3>
+<div class="panel">
+<svg viewBox="0 0 780 170" role="img" aria-label="Δρόμος αλλαγής SAP">
+<defs><marker id="ar3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g font-weight="700" font-size="14" text-anchor="middle">
+<rect x="10" y="20" width="220" height="90" rx="14" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/><text x="120" y="52">Ανάπτυξη (DEV)</text><text x="120" y="76" font-size="12" font-weight="400">φτιάχνεται η αλλαγή</text><text x="120" y="94" font-size="12" font-weight="400">κανείς δεν χρησιμοποιεί</text>
+<rect x="280" y="20" width="220" height="90" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/><text x="390" y="52">Δοκιμές (QAS / TEST)</text><text x="390" y="76" font-size="12" font-weight="400">τεστάρεται με σενάρια</text><text x="390" y="94" font-size="12" font-weight="400">εδώ μπαίνει η δουλειά σου</text>
+<rect x="550" y="20" width="220" height="90" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="660" y="52">Παραγωγή (PRD)</text><text x="660" y="76" font-size="12" font-weight="400">το πραγματικό σύστημα</text><text x="660" y="94" font-size="12" font-weight="400">μόνο με έγκριση</text></g>
+<g stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#ar3)"><path d="M230,65 L278,65"/><path d="M500,65 L548,65"/></g>
+<text x="390" y="145" text-anchor="middle" font-size="14" fill="#374151">Αυτό το «πέρασμα» λέγεται transport και πρέπει να είναι υπό change control.</text>
+</svg>
+<p class="cap" style="margin:6px 0 0">Τα ονόματα των περιβαλλόντων διαφέρουν ανά εταιρεία. Η ιδέα είναι κοινή: πρώτα δοκιμή, μετά παραγωγή, με έγκριση.</p></div>
+
+<h3>EQMS: η ζωή ενός εγγράφου</h3>
+<div class="panel">
+<svg viewBox="0 0 780 190" role="img" aria-label="Κύκλος ζωής εγγράφου">
+<defs><marker id="ar4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/></marker></defs>
+<g font-weight="700" font-size="13" text-anchor="middle">
+<rect x="5" y="30" width="120" height="70" rx="12" fill="#f3f4f6" stroke="#6b7280" stroke-width="3"/><text x="65" y="60">Draft</text><text x="65" y="80" font-size="11" font-weight="400">γράφεται</text>
+<rect x="140" y="30" width="120" height="70" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="3"/><text x="200" y="60">Review</text><text x="200" y="80" font-size="11" font-weight="400">ελέγχεται</text>
+<rect x="275" y="30" width="120" height="70" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="335" y="60">Approval</text><text x="335" y="80" font-size="11" font-weight="400">υπογραφές, QA</text>
+<rect x="410" y="30" width="120" height="70" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="470" y="60">Effective</text><text x="470" y="80" font-size="11" font-weight="400">ισχύει + εκπαίδευση</text>
+<rect x="545" y="30" width="120" height="70" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><text x="605" y="60">Periodic review</text><text x="605" y="80" font-size="11" font-weight="400">ακόμα σωστό;</text>
+<rect x="680" y="30" width="95" height="70" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/><text x="727" y="60">Obsolete</text><text x="727" y="80" font-size="11" font-weight="400">αποσύρεται</text></g>
+<g stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#ar4)"><path d="M125,65 L138,65"/><path d="M260,65 L273,65"/><path d="M395,65 L408,65"/><path d="M530,65 L543,65"/><path d="M665,65 L678,65"/></g>
+<text x="390" y="150" text-anchor="middle" font-size="14" fill="#374151">Πάντα μία ενεργή έκδοση. Οι παλιές μένουν στο αρχείο, αλλά δεν χρησιμοποιούνται.</text>
+</svg></div>
+
+<h2 id="d">3. Πώς δένουν με τη δική σου δουλειά</h2>
+<div class="grid">
+<div class="card"><b>📘 Τα έγγραφά σου ζουν στο EQMS</b><br>URS, πρωτόκολλα IQ/OQ/PQ, RTM, validation report: γράφονται, ελέγχονται, εγκρίνονται και αρχειοθετούνται εκεί.</div>
+<div class="card"><b>🔁 Η αλλαγή ενός συστήματος ανοίγει change control στο EQMS</b><br>Αν αλλάξει το SAP, ανοίγει change control με αξιολόγηση επίπτωσης και tests.</div>
+<div class="card"><b>⚠️ Τα deviations των tests καταγράφονται στο EQMS</b><br>Αποτυχία OQ → deviation record → CAPA αν χρειάζεται.</div>
+<div class="card"><b>🏢 Το SAP είναι ένα από τα συστήματα που επικυρώνεις</b><br>Και το EQMS είναι επίσης computerised σύστημα που επικυρώθηκε.</div>
+</div>
+<div class="box tip"><b class="t">Ωραίο να πεις</b>
+«Το EQMS είναι εκεί που αποδεικνύω τη δουλειά μου. Το SAP είναι ένα από τα συστήματα που αποδεικνύω ότι δουλεύουν σωστά.»</div>
+
+<h2 id="e">4. Σενάρια</h2>
+<details class="q"><summary>1. Έγινε αλλαγή στο SAP (transport) χωρίς να περάσει από δοκιμές.</summary>
+<ol><li>Ενημερώνω QA και τον system owner.</li><li>Αξιολόγηση: άγγιξε GxP διεργασία (status παρτίδας, master data, ποιότητα);</li><li>Deviation και retrospective change control.</li><li>Regression tests στις κρίσιμες ροές.</li><li>CAPA: τεχνικός έλεγχος που δεν αφήνει transport χωρίς έγκριση.</li></ol></details>
+<details class="q"><summary>2. Βρέθηκε χρήστης στο SAP που μπορεί να δημιουργεί παραγγελία και να την εγκρίνει.</summary>
+<p>Σύγκρουση καθηκόντων (segregation of duties). Αφαιρώ το δικαίωμα μέσω της διαδικασίας διαχείρισης χρηστών, καταγράφω, και ελέγχω αν έγινε κατάχρηση στο ιστορικό. Ανανεώνω τον πίνακα ρόλων (authorization matrix) και προσθέτω έλεγχο στο periodic review.</p></details>
+<details class="q"><summary>3. Στο EQMS, ένα SOP είναι ενεργό αλλά οι χειριστές δεν το έχουν διαβάσει.</summary>
+<p>Το έγγραφο ισχύει χωρίς εκπαίδευση: κενό. Ελέγχω ότι το σύστημα ενεργοποιεί training task και ότι υπάρχει κανόνας ως προς το πότε γίνεται effective. Αν έγινε χρήση πριν την εκπαίδευση, deviation.</p></details>
+<details class="q"><summary>4. Δύο εκδόσεις του ίδιου SOP κυκλοφορούν.</summary>
+<p>Παραβιάζεται ο κανόνας «μία ενεργή έκδοση». Αποσύρω την παλιά, βρίσκω πώς έγινε (εκτυπώσεις; τοπικά αντίγραφα;), και ελέγχω τη διαδικασία εκτύπωσης (ελεγχόμενα αντίγραφα). Σχετικό με το εύρημα της FDA για μη ελεγχόμενες φόρμες.</p></details>
+<details class="q"><summary>5. Ο προμηθευτής του EQMS (αν είναι cloud) κάνει αναβάθμιση.</summary>
+<p>Συμφωνημένο κύκλο εκδόσεων. Παίρνω release notes, αξιολογώ επίπτωση, κάνω regression στις GxP λειτουργίες (υπογραφές, audit trail, ροές έγκρισης) πριν ή αμέσως μετά. Έχω πλάνο για το τι κάνω αν κάτι χαλάσει.</p></details>
+<details class="q"><summary>6. Κάποιος ζητά να αλλάξει μια ηλεκτρονική υπογραφή ή ημερομηνία σε έγκριση εγγράφου.</summary>
+<p>Όχι. Οι υπογραφές και οι ημερομηνίες δεν αλλάζουν. Αν υπάρχει λάθος, δημιουργείται νέα έκδοση ή σχολιασμός με ίχνος. Αυτό είναι η ουσία του Part 11.</p></details>
+
+<h2 id="f">5. Κουίζ</h2>
+<details class="q"><summary>«Σε ποιο σύστημα βλέπω αν μια παρτίδα επιτρέπεται να χρησιμοποιηθεί;»</summary><span class="ans">SAP (status παρτίδας)</span></details>
+<details class="q"><summary>«Πού είναι η τελευταία εγκεκριμένη έκδοση μιας διαδικασίας;»</summary><span class="ans">EQMS</span></details>
+<details class="q"><summary>«Πού καταγράφεται ότι το test OQ απέτυχε και τι κάναμε;»</summary><span class="ans">EQMS (deviation)</span></details>
+<details class="q"><summary>«Πού δημιουργείται η εντολή αγοράς ενός υλικού;»</summary><span class="ans">SAP</span></details>
+<details class="q"><summary>«Τι είναι ο δρόμος DEV → TEST → PRD στο SAP;»</summary><span class="ans">Η διαδρομή των αλλαγών (transports), με δοκιμή πριν την παραγωγή</span></details>
+<details class="q"><summary>«Ποιο σύστημα κρατά ποιος εκπαιδεύτηκε σε ποια διαδικασία;»</summary><span class="ans">EQMS (training)</span></details>
+
+<h2 id="g">6. Ερωτήσεις: τι μπορεί να ρωτήσουν, και τι να ρωτήσεις</h2>
+<details class="q"><summary>«Ξέρεις SAP;»</summary>
+<div class="box say">«Όχι σε βάθος. Έχω δουλέψει με ERP ως χρήστης και με εργαλεία πάνω σε υπάρχον σύστημα. Καταλαβαίνω τη λογική: υλικά, παρτίδες, status και δικαιώματα. Για το validation με ενδιαφέρουν οι GxP διεργασίες και οι αλλαγές, και θα μάθω τα modules σας.»</div></details>
+<details class="q"><summary>«Πώς θα επικύρωνες μια αλλαγή στο SAP;»</summary>
+<div class="box say">«Με change control: περιγραφή, αξιολόγηση επίπτωσης στις GxP διεργασίες, δοκιμές στο περιβάλλον δοκιμών, regression των κρίσιμων ροών, έγκριση από QA, και μετά transport στην παραγωγή με καταγραφή.»</div></details>
+<details class="q"><summary>«Τι ξέρεις για ηλεκτρονικό QMS;»</summary>
+<div class="box say">«Ότι κρατά τα έγγραφα και τις διαδικασίες με έλεγχο έκδοσης, ροή έγκρισης και ηλεκτρονικές υπογραφές, και καταγράφει change control, deviations και CAPA. Δεν έχω δουλέψει με συγκεκριμένο προϊόν.»</div></details>
+<div class="panel"><b>Ερωτήσεις που μπορείς να κάνεις εσύ</b>
+<ul>
+<li>Ποια modules του SAP είναι GxP-κρίσιμα για εσάς;</li>
+<li>Το EQMS είναι σε cloud ή τοπικά; Πώς διαχειρίζεστε τις αναβαθμίσεις του;</li>
+<li>Οι αλλαγές στο SAP περνούν από το δικό μου team ή από άλλη ομάδα;</li>
+<li>Έχετε ήδη templates για πρωτόκολλα και reports στο EQMS;</li>
+</ul></div>
+
+<h2 id="h">7. Φύλλο 1 λεπτού</h2>
+<div class="panel"><ul>
+<li>🏢 <b>SAP</b>: υλικά, παρτίδες, status, δικαιώματα · ρίσκα: master data, δικαιώματα, transports χωρίς έλεγχο · δοκιμή: μπλοκάρει παρτίδα σε καραντίνα;</li>
+<li>📘 <b>EQMS</b>: έγγραφα, change control, deviations, CAPA, training · ρίσκα: δύο εκδόσεις, υπογραφές, ενεργό χωρίς εκπαίδευση · δοκιμή: ροή έγκρισης και audit trail.</li>
+<li>🔁 Αλλαγή = change control στο EQMS → δοκιμές → έγκριση QA → transport.</li>
+<li>🔍 Και τα δύο: GAMP 4 (+5 για custom), Part 11 / Annex 11, ALCOA+.</li>
+</ul></div>
+<div class="box tip"><b class="t">Αν θυμάσαι μία φράση</b>
+«Το SAP κρατά τι έχουμε και τι επιτρέπεται. Το EQMS κρατά τι κανόνες ισχύουν και ποιος τους ενέκρινε. Εγώ φροντίζω ότι και τα δύο είναι αξιόπιστα.»</div>
+</div>
+<script>
+const S=[
+{ic:'🏢',t:'SAP',s:'γραμματεία + αποθήκη',
+k5:'Η γραμματεία του σχολείου με την αποθήκη. Ξέρει πόσα μολύβια έχουμε, πού είναι, ποια κουτιά είναι κλειδωμένα και ποιος μπορεί να τα πάρει. Αν ένα κουτί έχει κόκκινο αυτοκόλλητο, δεν το δίνει.',
+what:'Ένα ERP (σύστημα σχεδιασμού πόρων). Αποτελείται από modules: υλικά και αγορές, αποθήκη, παραγωγή, ποιότητα (QM), οικονομικά, πωλήσεις. Στη φαρμακευτική κρίσιμα είναι το batch management (ιχνηλασιμότητα παρτίδων), το status των υλικών (καραντίνα, ελεγχόμενο, εγκεκριμένο, μπλοκαρισμένο) και η σύνδεση με την ποιότητα. Δεν είναι όλο GxP: ορίζεται με risk assessment.',
+bad:['Αλλαγή master data χωρίς έλεγχο (συνταγή υλικών, προδιαγραφή)','Ρόλοι με υπερβολικά δικαιώματα ή σύγκρουση καθηκόντων','Αλλαγές (transports) στην παραγωγή χωρίς δοκιμή και έγκριση','Χειροκίνητη αλλαγή status παρτίδας χωρίς ίχνος','Custom reports και interfaces που δεν δοκιμάστηκαν','Αναβάθμιση που αλλάζει συμπεριφορά και δεν ελέγχεται'],
+me:['Scope: ποιες διεργασίες είναι GxP (risk assessment)','Η ροή status είναι αναγκαστική: ό,τι είναι σε καραντίνα δεν μπορεί να χρησιμοποιηθεί','Authorization matrix: ρόλοι ανά θέση, έλεγχος συγκρούσεων καθηκόντων','Transports και αλλαγές μόνο μέσω change control','Audit trail σε GxP master data και αλλαγές status','Custom (cat. 5) ABAP reports και interfaces: verification','Regression των κρίσιμων ροών μετά από αναβάθμιση'],
+oth:[['IT / SAP team','ρυθμίσεις, transports'],['Key users','ιδιοκτησία διεργασιών και master data'],['QA','έγκριση, status παρτίδων'],['Supply chain','υλικά και ιχνηλασιμότητα'],['Vendor / integrator','πακέτο και custom']],
+gamp:'Cat. 4 (ρυθμιζόμενο). Custom κώδικας, reports, interfaces: cat. 5.',
+test:'Προσπαθώ να χρησιμοποιήσω παρτίδα σε καραντίνα σε εντολή παραγωγής: το σύστημα το αποτρέπει. Δοκιμάζω χρήστη με σύγκρουση ρόλων: το σύστημα μπλοκάρει. Αλλάζω master data και ελέγχω ότι το ίχνος δείχνει ποιος, πότε, παλιά/νέα τιμή.',
+q:'«Πώς κάνεις validation σε SAP; Είναι τεράστιο.»',
+a:'«Δεν επικυρώνω ολόκληρο το SAP. Κάνω risk assessment και ορίζω ποιες διεργασίες είναι GxP-κρίσιμες, όπως status παρτίδων, master data, ιχνηλασιμότητα και δικαιώματα. Εκεί εστιάζω τα tests και τις αλλαγές, και στηρίζομαι στον προμηθευτή για το βασικό πακέτο.»'},
+{ic:'📘',t:'EQMS',s:'βιβλίο κανόνων + υπογραφές',
+k5:'Το βιβλίο με τους κανόνες του σχολείου και το τετράδιο με τις υπογραφές. Ο κάθε κανόνας έχει όνομα, ποιος τον έγραψε, ποιος τον είδε και ποιος τον ενέκρινε. Υπάρχει μόνο μία ενεργή έκδοση. Και μένει γραμμένο ποιος τον διάβασε.',
+what:'Electronic Quality Management System. Διαχειρίζεται SOPs, πρωτόκολλα, reports με ροή έγκρισης και ηλεκτρονικές υπογραφές. Επίσης change control, deviations, CAPA, εκπαίδευση (training), audits και συχνά complaints. Η εταιρεία είπε ότι δουλεύει κυρίως ηλεκτρονικά, με λίγο χαρτί. Επειδή αποθηκεύει GxP αρχεία, είναι κι αυτό computerised σύστημα που πρέπει να είναι validated (Part 11 / Annex 11).',
+bad:['Δύο ενεργές εκδόσεις του ίδιου εγγράφου','Έγγραφο ενεργό πριν γίνει η εκπαίδευση','Υπογραφές που δεν συνδέονται σωστά με το χρήστη ή την έκδοση','Αλλαγή εγγραφής χωρίς ίχνος','Εκτυπώσεις που κυκλοφορούν ως τελικές (μη ελεγχόμενα αντίγραφα)','Αναβάθμιση του προμηθευτή (αν cloud) που αλλάζει συμπεριφορά','Αρχείο που δεν ανακτάται όταν ζητηθεί'],
+me:['Ροή έγκρισης: ποιος, με ποια σειρά, δεν παρακάμπτεται','Ηλεκτρονικές υπογραφές: μοναδικός χρήστης, ημερομηνία/ώρα, νόημα υπογραφής, δέσιμο με το έγγραφο','Έλεγχος έκδοσης: μία ενεργή, οι παλιές αρχειοθετούνται','Σύνδεση με εκπαίδευση πριν το effective','Audit trail και δικαιώματα ανά ρόλο','Ελεγχόμενες εκτυπώσεις','Backup, restore, ανάκτηση αρχείων','Αν είναι cloud: αξιολόγηση προμηθευτή και διαχείριση αναβαθμίσεων'],
+oth:[['QA','ιδιοκτήτης συστήματος και διαδικασιών'],['IT','διαχείριση και ασφάλεια'],['Όλες οι ομάδες','χρήστες'],['Vendor','πακέτο, αναβαθμίσεις']],
+gamp:'Cat. 4 (ρυθμιζόμενο). Ειδικές ρυθμίσεις/integrations: cat. 5.',
+test:'Δοκιμάζω ροή έγκρισης: το έγγραφο δεν γίνεται ενεργό χωρίς όλες τις υπογραφές. Προσπαθώ να αλλάξω υπογεγραμμένο έγγραφο: το σύστημα δημιουργεί νέα έκδοση. Ελέγχω ότι η υπογραφή δείχνει χρήστη, ώρα, νόημα.',
+q:'«Τι ξέρεις για ηλεκτρονικό QMS;»',
+a:'«Ότι κρατά τα έγγραφα και τις διαδικασίες με έλεγχο έκδοσης, ροή έγκρισης και ηλεκτρονικές υπογραφές, και καταγράφει change control, deviations και CAPA. Επειδή είναι GxP σύστημα, πρέπει να είναι validated και να διατηρεί audit trail.»'}
+];
+const li=a=>a.map(x=>'<li>'+x+'</li>').join('');
+function show(o,b){
+ document.querySelectorAll('.tb').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ document.getElementById('detail').innerHTML=
+ '<h3 style="margin-top:14px">'+o.ic+' '+o.t+' <span class="cap">— '+o.s+'</span></h3>'+
+ '<div class="sec s-k5"><h4>Σαν να είσαι 5</h4>'+o.k5+'</div>'+
+ '<div class="sec s-what"><h4>Τι είναι</h4>'+o.what+'</div>'+
+ '<div class="sec s-bad"><h4>Τι μπορεί να στραβώσει</h4><ul>'+li(o.bad)+'</ul></div>'+
+ '<div class="sec s-me"><h4>Τι τσεκάρεις ΕΣΥ</h4><ul>'+li(o.me)+'</ul></div>'+
+ '<div class="sec s-oth"><h4>Ποιοι άλλοι εμπλέκονται (τυπικά)</h4>'+o.oth.map(p=>'<span class="chip">'+p[0]+'</span> '+p[1]).join('<br>')+'<p style="margin:6px 0 0"><b>GAMP:</b> '+o.gamp+'</p></div>'+
+ '<div class="sec s-test"><h4>Παράδειγμα test</h4>'+o.test+'</div>'+
+ '<div class="sec s-q"><h4>Ερώτηση που μπορεί να έρθει</h4><b>'+o.q+'</b><br><i>'+o.a+'</i></div>';
+}
+const T=document.getElementById('tabs');
+S.forEach(o=>{const b=document.createElement('button');b.className='tb';b.innerHTML=o.ic+'<br>'+o.t+'<small>'+o.s+'</small>';b.onclick=()=>show(o,b);T.appendChild(b);});
+show(S[0],T.children[0]);
+</script>
+</body>
+</html>
